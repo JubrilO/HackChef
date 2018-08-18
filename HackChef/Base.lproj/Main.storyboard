@@ -54,8 +54,8 @@
                                                         <color key="textColor" red="0.65490196078431373" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-uN-PvF">
-                                                        <rect key="frame" x="273.5" y="15" width="76.5" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-uN-PvF">
+                                                        <rect key="frame" x="272" y="15" width="78" height="17"/>
                                                         <fontDescription key="fontDescription" name="WorkSans-Medium" family="Work Sans" pointSize="14"/>
                                                         <color key="textColor" red="0.65490196079999996" green="0.62352941179999999" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -174,22 +174,14 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u41-mB-LcR" customClass="HCHighlightedButton" customModule="HackChef" customModuleProvider="target">
-                                                                <rect key="frame" x="129" y="-6" width="170" height="30"/>
-                                                                <state key="normal" title=" So much stuff is goin on">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="u41-mB-LcR" firstAttribute="leading" secondItem="ywv-bM-scd" secondAttribute="trailing" constant="10" id="6h0-rg-Avx"/>
                                                             <constraint firstAttribute="bottom" secondItem="Ar6-3a-puK" secondAttribute="bottom" constant="30" id="7GL-Iz-uxL"/>
                                                             <constraint firstAttribute="trailing" secondItem="Ar6-3a-puK" secondAttribute="trailing" constant="35" id="DqQ-P4-zkR"/>
                                                             <constraint firstItem="Ar6-3a-puK" firstAttribute="leading" secondItem="qkW-aO-ZMJ" secondAttribute="leading" constant="25" id="lRA-nZ-vW0"/>
                                                             <constraint firstItem="ywv-bM-scd" firstAttribute="leading" secondItem="qkW-aO-ZMJ" secondAttribute="leading" constant="25" id="nu2-kK-3Rg"/>
                                                             <constraint firstItem="Ar6-3a-puK" firstAttribute="top" secondItem="ywv-bM-scd" secondAttribute="bottom" constant="11" id="rWa-UJ-W8J"/>
-                                                            <constraint firstItem="u41-mB-LcR" firstAttribute="centerY" secondItem="ywv-bM-scd" secondAttribute="centerY" id="wha-KF-cax"/>
                                                             <constraint firstItem="ywv-bM-scd" firstAttribute="top" secondItem="qkW-aO-ZMJ" secondAttribute="top" id="ySa-Jl-q2m"/>
                                                         </constraints>
                                                     </view>
@@ -250,6 +242,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                             <constraint firstItem="6dM-3N-IA9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="wzf-af-szI"/>
                             <constraint firstItem="pE8-11-OTU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yBW-ri-Pit"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="3nP-TQ-6oD"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="850"/>
@@ -297,25 +290,51 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <action selector="onBackButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="N4M-cx-K7W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-tk-Rhv">
-                                        <rect key="frame" x="306" y="8" width="44" height="44"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tai-ma-Vc4">
+                                        <rect key="frame" x="321" y="10" width="40" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-AB-qB1">
+                                                <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                                <color key="backgroundColor" red="1" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="M0a-sl-Icx"/>
+                                                    <constraint firstAttribute="height" constant="20" id="S7q-Vh-K2f"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-C2-AAh">
+                                                <rect key="frame" x="16.5" y="13.5" width="7" height="13"/>
+                                                <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="11"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="e3y-aA-jee"/>
-                                            <constraint firstAttribute="height" constant="44" id="ybT-fG-QTf"/>
+                                            <constraint firstItem="pc4-C2-AAh" firstAttribute="centerX" secondItem="tai-ma-Vc4" secondAttribute="centerX" id="DK8-Dy-yfi"/>
+                                            <constraint firstItem="xKN-AB-qB1" firstAttribute="centerX" secondItem="tai-ma-Vc4" secondAttribute="centerX" id="RD9-LA-Pge"/>
+                                            <constraint firstItem="pc4-C2-AAh" firstAttribute="centerY" secondItem="tai-ma-Vc4" secondAttribute="centerY" id="XsU-pO-abC"/>
+                                            <constraint firstItem="xKN-AB-qB1" firstAttribute="centerY" secondItem="tai-ma-Vc4" secondAttribute="centerY" id="aU6-Gc-PWR"/>
+                                            <constraint firstAttribute="height" constant="40" id="bW1-yF-jGi"/>
+                                            <constraint firstAttribute="width" constant="40" id="ktA-PP-1t3"/>
                                         </constraints>
-                                        <state key="normal" image="Comments"/>
                                         <connections>
-                                            <action selector="onCommentsButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="NuY-au-3TS"/>
+                                            <outletCollection property="gestureRecognizers" destination="f0M-MH-607" appends="YES" id="zf8-hd-DAi"/>
                                         </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="CG0-4I-ga6" firstAttribute="centerY" secondItem="HWO-6Z-s22" secondAttribute="centerY" id="FZy-G7-Hjg"/>
-                                    <constraint firstItem="nIc-tk-Rhv" firstAttribute="centerY" secondItem="HWO-6Z-s22" secondAttribute="centerY" id="Khf-xZ-9bQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="nIc-tk-Rhv" secondAttribute="trailing" constant="25" id="eSG-2o-e6w"/>
+                                    <constraint firstAttribute="trailing" secondItem="tai-ma-Vc4" secondAttribute="trailing" constant="14" id="Gke-EC-Gx5"/>
                                     <constraint firstAttribute="height" constant="60" id="ft6-JP-eDz"/>
                                     <constraint firstItem="CG0-4I-ga6" firstAttribute="leading" secondItem="HWO-6Z-s22" secondAttribute="leading" constant="25" id="oOs-yM-eeN"/>
+                                    <constraint firstItem="tai-ma-Vc4" firstAttribute="centerY" secondItem="HWO-6Z-s22" secondAttribute="centerY" id="oZE-1L-tKM"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients for Tobi Smith’s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-1c-97y">
@@ -407,7 +426,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-1q-5RV">
-                                        <rect key="frame" x="248" y="15" width="102" height="30"/>
+                                        <rect key="frame" x="136.5" y="15" width="102" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -415,12 +434,6 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <color key="titleColor" red="1" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXX-Tv-gNB">
-                                        <rect key="frame" x="25" y="21" width="53" height="18"/>
-                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="15"/>
-                                        <color key="textColor" red="0.65490196078431373" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHV-sO-Gbh" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -431,14 +444,12 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="RcD-1q-5RV" secondAttribute="trailing" constant="25" id="21Q-cA-fLL"/>
                                     <constraint firstItem="NHV-sO-Gbh" firstAttribute="leading" secondItem="KTy-9b-ZDT" secondAttribute="leading" id="5Ws-EP-DiH"/>
-                                    <constraint firstItem="QXX-Tv-gNB" firstAttribute="centerY" secondItem="KTy-9b-ZDT" secondAttribute="centerY" id="Aq9-qp-660"/>
                                     <constraint firstItem="RcD-1q-5RV" firstAttribute="centerY" secondItem="KTy-9b-ZDT" secondAttribute="centerY" id="IUK-9r-4m6"/>
                                     <constraint firstItem="NHV-sO-Gbh" firstAttribute="top" secondItem="KTy-9b-ZDT" secondAttribute="top" id="Kgb-7O-Jvq"/>
+                                    <constraint firstItem="RcD-1q-5RV" firstAttribute="centerX" secondItem="KTy-9b-ZDT" secondAttribute="centerX" id="Wey-CV-uPA"/>
                                     <constraint firstAttribute="trailing" secondItem="NHV-sO-Gbh" secondAttribute="trailing" id="q2g-ak-wNM"/>
                                     <constraint firstAttribute="height" constant="60" id="va0-i9-ee9"/>
-                                    <constraint firstItem="QXX-Tv-gNB" firstAttribute="leading" secondItem="KTy-9b-ZDT" secondAttribute="leading" constant="25" id="zZb-DU-Skj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -463,21 +474,94 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                     </view>
                     <connections>
                         <outlet property="chefNameHeaderLabel" destination="EJZ-1c-97y" id="Wdz-ZK-XDk"/>
-                        <outlet property="commentsButton" destination="nIc-tk-Rhv" id="FR8-Xw-oYo"/>
                         <outlet property="recipeNameLabel" destination="hmg-nZ-THC" id="ASI-AP-zdB"/>
                         <outlet property="tableView" destination="OrX-5a-8WP" id="piY-p8-u46"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYj-jJ-yLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f0M-MH-607"/>
             </objects>
             <point key="canvasLocation" x="959" y="51"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dv5-vH-JlX">
+            <objects>
+                <viewController id="kZV-4m-DLh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KU9-Rr-cF9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFk-hY-br3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGh-1Y-P3U">
+                                        <rect key="frame" x="25" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="qhx-hC-3gz"/>
+                                            <constraint firstAttribute="width" constant="44" id="rHb-vZ-NeS"/>
+                                        </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="onBackButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="uoq-W0-GYW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6H6-UN-DCs"/>
+                                    <constraint firstItem="RGh-1Y-P3U" firstAttribute="centerY" secondItem="wFk-hY-br3" secondAttribute="centerY" id="Gvy-Fd-lPC"/>
+                                    <constraint firstItem="RGh-1Y-P3U" firstAttribute="leading" secondItem="wFk-hY-br3" secondAttribute="leading" constant="25" id="ki8-Y8-8vn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-WG-ctd">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seh-dR-Mqe">
+                                        <rect key="frame" x="310" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="NSz-BN-yIf"/>
+                                            <constraint firstAttribute="height" constant="40" id="dZR-jt-upu"/>
+                                        </constraints>
+                                        <state key="normal" image="rightArrow"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20F-qe-ulP">
+                                        <rect key="frame" x="150" y="10" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="seh-dR-Mqe" secondAttribute="trailing" constant="25" id="Ir1-RC-Rvt"/>
+                                    <constraint firstAttribute="height" constant="50" id="Lva-81-Kcx"/>
+                                    <constraint firstItem="seh-dR-Mqe" firstAttribute="centerY" secondItem="1WC-WG-ctd" secondAttribute="centerY" id="ebz-Ef-yUk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wFk-hY-br3" firstAttribute="leading" secondItem="3z3-pc-QG2" secondAttribute="leading" id="47f-Pw-5Jn"/>
+                            <constraint firstItem="3z3-pc-QG2" firstAttribute="trailing" secondItem="1WC-WG-ctd" secondAttribute="trailing" id="IqY-QA-Bfr"/>
+                            <constraint firstItem="1WC-WG-ctd" firstAttribute="leading" secondItem="3z3-pc-QG2" secondAttribute="leading" id="MtM-sc-jrb"/>
+                            <constraint firstItem="wFk-hY-br3" firstAttribute="trailing" secondItem="3z3-pc-QG2" secondAttribute="trailing" id="Ovm-tq-OjQ"/>
+                            <constraint firstItem="wFk-hY-br3" firstAttribute="top" secondItem="3z3-pc-QG2" secondAttribute="top" id="Qnc-dm-ogW"/>
+                            <constraint firstItem="3z3-pc-QG2" firstAttribute="bottom" secondItem="1WC-WG-ctd" secondAttribute="bottom" id="aYP-Xe-347"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3z3-pc-QG2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mP4-VN-1oB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704" y="36"/>
         </scene>
     </scenes>
     <resources>
         <image name="3bc265aeb4053924124f01b5248077c2 (1)" width="750" height="750"/>
-        <image name="Comments" width="18" height="16"/>
-        <image name="back" width="7" height="12"/>
+        <image name="back" width="11" height="18"/>
         <image name="buttonArrow" width="10" height="10"/>
         <image name="buttonArrow2" width="10" height="10"/>
+        <image name="rightArrow" width="16" height="12"/>
     </resources>
 </document>
