@@ -10,22 +10,29 @@ import UIKit
 
 class IngredientViewController: UIViewController {
 
+    @IBOutlet weak var commentsButtonView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var recipeNameLabel: UILabel!
     @IBOutlet weak var chefNameHeaderLabel: UILabel!
-    @IBOutlet weak var commentsButton: UIButton!
+    @IBOutlet weak var listButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        listButton.isHidden = true
     }
 
-    @IBAction func onCommentsButtonTap(_ sender: UIButton) {
-        
+    @IBAction func onCommentsButtonTap(_ sender: UITapGestureRecognizer) {
+        sender.view?.isHidden = true
+        listButton.isHidden = false
+    }
+    
+    @IBAction func onListButtonTap(_ sender: UIButton) {
+        sender.isHidden = true
+        commentsButtonView.isHidden = false
     }
     
     @IBAction func onBackButtonTap(_ sender: UIButton) {
-        
+        dismiss(animated: true)
     }
 }
 

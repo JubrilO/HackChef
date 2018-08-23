@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41FF53B3DAC15D963B1D02B1 /* Pods_HackChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */; };
+		9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D503212A37F400E96247 /* IngredientDetailViewController.swift */; };
+		9126D506212A430500E96247 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D505212A430500E96247 /* CommentCell.swift */; };
+		9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D507212A435300E96247 /* CommentReplyCell.swift */; };
 		919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB07211F7123007B4765 /* AppDelegate.swift */; };
 		919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */; };
 		919CEB0D211F7123007B4765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919CEB0B211F7123007B4765 /* Main.storyboard */; };
@@ -27,9 +31,14 @@
 		919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */; };
 		919CEB36211FCA64007B4765 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB35211FCA64007B4765 /* Constants.swift */; };
 		919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB37212061AB007B4765 /* TableViewCell.swift */; };
+		91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F06C46D5BC43E71636FCE91 /* Pods-HackChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackChef/Pods-HackChef.debug.xcconfig"; sourceTree = "<group>"; };
+		9126D503212A37F400E96247 /* IngredientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailViewController.swift; sourceTree = "<group>"; };
+		9126D505212A430500E96247 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		9126D507212A435300E96247 /* CommentReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyCell.swift; sourceTree = "<group>"; };
 		919CEB04211F7123007B4765 /* HackChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919CEB07211F7123007B4765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOverviewVC.swift; sourceTree = "<group>"; };
@@ -52,6 +61,9 @@
 		919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCHighlightedButton.swift; sourceTree = "<group>"; };
 		919CEB35211FCA64007B4765 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		919CEB37212061AB007B4765 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepViewController.swift; sourceTree = "<group>"; };
+		CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEEF422BD96CFDA8D2E1632D /* Pods-HackChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackChef/Pods-HackChef.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FF53B3DAC15D963B1D02B1 /* Pods_HackChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033F17F410D2322ADE501434 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		919CEAFB211F7122007B4765 = {
 			isa = PBXGroup;
 			children = (
 				919CEB06211F7123007B4765 /* HackChef */,
+				919CEB32211FB5E4007B4765 /* Supporting */,
 				919CEB05211F7123007B4765 /* Products */,
+				E9706CBE52A671D94B39044E /* Pods */,
+				033F17F410D2322ADE501434 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,10 +113,13 @@
 				919CEB07211F7123007B4765 /* AppDelegate.swift */,
 				919CEB2C211F8738007B4765 /* DottedBorderView.swift */,
 				919CEB30211FB5CF007B4765 /* IngredientViewController.swift */,
+				9126D503212A37F400E96247 /* IngredientDetailViewController.swift */,
 				919CEB37212061AB007B4765 /* TableViewCell.swift */,
 				919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */,
+				91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */,
 				919CEB13211F7124007B4765 /* Info.plist */,
-				919CEB32211FB5E4007B4765 /* Supporting */,
+				9126D505212A430500E96247 /* CommentCell.swift */,
+				9126D507212A435300E96247 /* CommentReplyCell.swift */,
 			);
 			path = HackChef;
 			sourceTree = "<group>";
@@ -125,6 +152,15 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		E9706CBE52A671D94B39044E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F06C46D5BC43E71636FCE91 /* Pods-HackChef.debug.xcconfig */,
+				DEEF422BD96CFDA8D2E1632D /* Pods-HackChef.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 919CEB16211F7124007B4765 /* Build configuration list for PBXNativeTarget "HackChef" */;
 			buildPhases = (
+				E09D44585947A30263F155D9 /* [CP] Check Pods Manifest.lock */,
 				919CEB00211F7122007B4765 /* Sources */,
 				919CEB01211F7122007B4765 /* Frameworks */,
 				919CEB02211F7122007B4765 /* Resources */,
+				6891B46A52087C8EAB0D592E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +238,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6891B46A52087C8EAB0D592E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HackChef/Pods-HackChef-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackChef/Pods-HackChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E09D44585947A30263F155D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackChef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		919CEB00211F7122007B4765 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,11 +285,15 @@
 				919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */,
 				919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */,
 				919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */,
+				91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */,
 				919CEB36211FCA64007B4765 /* Constants.swift in Sources */,
 				919CEB2F211F87EB007B4765 /* Extensions.swift in Sources */,
+				9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */,
+				9126D506212A430500E96247 /* CommentCell.swift in Sources */,
 				919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */,
 				919CEB31211FB5CF007B4765 /* IngredientViewController.swift in Sources */,
 				919CEB2D211F8738007B4765 /* DottedBorderView.swift in Sources */,
+				9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +435,7 @@
 		};
 		919CEB17211F7124007B4765 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F06C46D5BC43E71636FCE91 /* Pods-HackChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -374,6 +456,7 @@
 		};
 		919CEB18211F7124007B4765 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEEF422BD96CFDA8D2E1632D /* Pods-HackChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

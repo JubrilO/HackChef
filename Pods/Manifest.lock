@@ -1,0 +1,16 @@
+PODS:
+  - GrowingTextView (0.5.6)
+
+DEPENDENCIES:
+  - GrowingTextView (~> 0.5)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GrowingTextView
+
+SPEC CHECKSUMS:
+  GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
+
+PODFILE CHECKSUM: 7e79677bf7ac5e8e6ce562110087b60c980ef803
+
+COCOAPODS: 1.5.2

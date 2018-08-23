@@ -23,16 +23,11 @@ class RecipeOverviewVC: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        contentViewTopConstraint.constant = mainImageView.frame.height
+        contentViewTopConstraint.constant = mainImageView.bounds.height
         view.layoutIfNeeded()
-        scrollView.scrollRectToVisible(view.bounds, animated: false)
+  
     }
-    
+
     @IBAction func onIngredientsButtonTap(_ sender: UITapGestureRecognizer) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.IngredientVC) as? IngredientViewController {
             present(vc, animated: true)
@@ -40,7 +35,7 @@ class RecipeOverviewVC: UIViewController {
     }
     
     @IBAction func onStartCookingButtonTap(_ sender: UITapGestureRecognizer) {
-        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC )
     }
 }
 

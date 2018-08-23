@@ -14,6 +14,9 @@ struct Constants {
     }
     struct StoryboardIDs {
         static let IngredientVC = "IngredientVC"
+        static let CookingStepVC = "CookingStepVC"
+        static let IngredientDetailVC = "IngredientDetailVC"
+        static let RecipeOverviewVC = "RecipeOverviewVC"
     }
     
 }
