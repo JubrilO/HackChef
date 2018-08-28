@@ -11,6 +11,8 @@ struct Constants {
     struct CellIdentifiers {
         static let IngredientCell = "IngredientCell"
         static let IngredientLinkCell = "IngredientLinkCell"
+        static let CommentCell = "CommentCell"
+        static let ReplyCell = "ReplyCell"
     }
     struct StoryboardIDs {
         static let IngredientVC = "IngredientVC"

@@ -28,12 +28,27 @@ class CookingStepViewController: UIViewController {
     }
 
     @IBAction func onPlayButtonTap(_ sender: UIButton) {
+        
     }
     
     @IBAction func onNextButtonTap(_ sender: UIButton) {
     }
     
     @IBAction func onMoreButtonTap(_ sender: UIButton) {
+        
+        let kpActionSheet = KPActionSheet(items: [
+            KPItem(title: "Return to previous step", onTap: {
+                print("Hello guys 😎")
+            }),
+            KPItem(title: "Send feedback on this step", onTap: {
+                print("Hello girls 😇")
+            }),
+            KPItem(title: "End cooking session", onTap: {
+                self.dismiss(animated: true)
+            })
+            ])
+        present(kpActionSheet, animated: true, completion: nil)
+
     }
     
 }

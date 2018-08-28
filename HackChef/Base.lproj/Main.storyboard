@@ -439,13 +439,16 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcD-1q-5RV">
-                                        <rect key="frame" x="136.5" y="15" width="102" height="30"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="59"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Start Cooking">
                                             <color key="titleColor" red="1" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onStartCookingButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="u0w-v2-CNo"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHV-sO-Gbh" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -458,10 +461,12 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="NHV-sO-Gbh" firstAttribute="leading" secondItem="KTy-9b-ZDT" secondAttribute="leading" id="5Ws-EP-DiH"/>
-                                    <constraint firstItem="RcD-1q-5RV" firstAttribute="centerY" secondItem="KTy-9b-ZDT" secondAttribute="centerY" id="IUK-9r-4m6"/>
+                                    <constraint firstItem="RcD-1q-5RV" firstAttribute="top" secondItem="NHV-sO-Gbh" secondAttribute="bottom" id="CWl-1M-9Q6"/>
                                     <constraint firstItem="NHV-sO-Gbh" firstAttribute="top" secondItem="KTy-9b-ZDT" secondAttribute="top" id="Kgb-7O-Jvq"/>
-                                    <constraint firstItem="RcD-1q-5RV" firstAttribute="centerX" secondItem="KTy-9b-ZDT" secondAttribute="centerX" id="Wey-CV-uPA"/>
+                                    <constraint firstAttribute="bottom" secondItem="RcD-1q-5RV" secondAttribute="bottom" id="WSP-D1-0FZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RcD-1q-5RV" secondAttribute="trailing" id="pvu-mg-8fF"/>
                                     <constraint firstAttribute="trailing" secondItem="NHV-sO-Gbh" secondAttribute="trailing" id="q2g-ak-wNM"/>
+                                    <constraint firstItem="RcD-1q-5RV" firstAttribute="leading" secondItem="KTy-9b-ZDT" secondAttribute="leading" id="qiA-Ai-q2X"/>
                                     <constraint firstAttribute="height" constant="60" id="va0-i9-ee9"/>
                                 </constraints>
                             </view>
@@ -539,8 +544,8 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-WG-ctd">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seh-dR-Mqe">
-                                        <rect key="frame" x="311" y="5" width="40" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seh-dR-Mqe">
+                                        <rect key="frame" x="310" y="5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="NSz-BN-yIf"/>
                                             <constraint firstAttribute="height" constant="40" id="dZR-jt-upu"/>
@@ -612,36 +617,46 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                                 <rect key="frame" x="25" y="403" width="325" height="134"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="26" id="I9Y-oD-a0V" customClass="CommentCell" customModule="HackChef" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="325" height="26"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="I9Y-oD-a0V" customClass="CommentCell" customModule="HackChef" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="325" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9Y-oD-a0V" id="MCl-VL-pAK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="26"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ebele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="24" translatesAutoresizingMaskIntoConstraints="NO" id="RSv-Mi-6gi">
-                                                                    <rect key="frame" x="0.0" y="9.5" width="35.5" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="ebele" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="24" translatesAutoresizingMaskIntoConstraints="NO" id="RSv-Mi-6gi">
+                                                                    <rect key="frame" x="0.0" y="8" width="35.5" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="where do I get all this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="24" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-BG-ARU">
-                                                                    <rect key="frame" x="38.5" y="10" width="147" height="16"/>
-                                                                    <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="24" translatesAutoresizingMaskIntoConstraints="NO" id="hj0-BG-ARU">
+                                                                    <rect key="frame" x="0.0" y="8" width="325" height="34"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment>
+                                                                            <string key="content">where do I get all this? e/var/containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2018-08-24 00:47:47.962278+0100 HackChef[6140:2248477] [MC] Reading from public effective user setting</string>
+                                                                            <attributes>
+                                                                                <font key="NSFont" size="13" name="WorkSans-Regular"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="RSv-Mi-6gi" secondAttribute="bottom" id="aiD-ri-fef"/>
+                                                                <constraint firstItem="RSv-Mi-6gi" firstAttribute="top" secondItem="MCl-VL-pAK" secondAttribute="top" constant="8" id="0NB-F9-dqf"/>
+                                                                <constraint firstItem="hj0-BG-ARU" firstAttribute="top" secondItem="MCl-VL-pAK" secondAttribute="top" constant="8" id="Juw-Pl-fiz"/>
+                                                                <constraint firstAttribute="trailing" secondItem="hj0-BG-ARU" secondAttribute="trailing" id="hE3-Lf-ZEU"/>
                                                                 <constraint firstItem="RSv-Mi-6gi" firstAttribute="leading" secondItem="MCl-VL-pAK" secondAttribute="leading" id="iSr-ZS-56z"/>
-                                                                <constraint firstAttribute="bottom" secondItem="hj0-BG-ARU" secondAttribute="bottom" id="qVb-e1-MDw"/>
-                                                                <constraint firstItem="hj0-BG-ARU" firstAttribute="leading" secondItem="RSv-Mi-6gi" secondAttribute="trailing" constant="3" id="xun-RF-bEB"/>
+                                                                <constraint firstItem="hj0-BG-ARU" firstAttribute="leading" secondItem="MCl-VL-pAK" secondAttribute="leading" id="pWl-Uu-6HD"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hj0-BG-ARU" secondAttribute="bottom" constant="8" id="sdJ-hv-vr0"/>
+                                                                <constraint firstItem="hj0-BG-ARU" firstAttribute="leading" relation="lessThanOrEqual" secondItem="RSv-Mi-6gi" secondAttribute="trailing" constant="8" symbolic="YES" id="xun-RF-bEB"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="26" id="TIa-BK-hg5" customClass="CommentCell" customModule="HackChef" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="54" width="325" height="26"/>
+                                                        <rect key="frame" x="0.0" y="78" width="325" height="26"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TIa-BK-hg5" id="5kh-4K-EdQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="325" height="26"/>
@@ -839,10 +854,9 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pW-k6-kx0">
-                                                <rect key="frame" x="310" y="459" width="40" height="40"/>
+                                                <rect key="frame" x="293" y="441.5" width="82" height="75.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="Bzu-WF-0AS"/>
-                                                    <constraint firstAttribute="height" constant="40" id="xyq-vl-Kge"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="sMB-Lv-8Ta"/>
                                                 </constraints>
                                                 <state key="normal" image="play"/>
                                                 <connections>
@@ -884,9 +898,9 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <constraint firstAttribute="trailing" secondItem="PmD-N7-LEG" secondAttribute="trailing" id="TLD-lf-OJn"/>
                                             <constraint firstAttribute="trailing" secondItem="4di-20-653" secondAttribute="trailing" constant="25" id="TRt-Ty-aqr"/>
                                             <constraint firstItem="yko-uM-UJd" firstAttribute="top" secondItem="MyN-ha-jDt" secondAttribute="bottom" constant="30" id="UAy-o4-WIQ"/>
-                                            <constraint firstItem="9pW-k6-kx0" firstAttribute="centerY" secondItem="OLl-kI-NtZ" secondAttribute="centerY" id="Ums-Nz-kDI"/>
+                                            <constraint firstItem="MyN-ha-jDt" firstAttribute="top" secondItem="9pW-k6-kx0" secondAttribute="bottom" id="biz-cD-hJy"/>
                                             <constraint firstItem="BcP-HK-UQ8" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="cQv-Dz-svc"/>
-                                            <constraint firstAttribute="trailing" secondItem="9pW-k6-kx0" secondAttribute="trailing" constant="25" id="cY7-CK-ozT"/>
+                                            <constraint firstAttribute="trailing" secondItem="9pW-k6-kx0" secondAttribute="trailing" id="cY7-CK-ozT"/>
                                             <constraint firstItem="EfK-yH-L9I" firstAttribute="top" secondItem="PmD-N7-LEG" secondAttribute="bottom" constant="30" id="cn0-E4-DA6"/>
                                             <constraint firstItem="LRY-Hc-5GC" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="dKZ-Ys-p42"/>
                                             <constraint firstItem="bPM-E7-gTs" firstAttribute="bottom" secondItem="4di-20-653" secondAttribute="bottom" id="dLv-JQ-U1Y"/>
@@ -897,6 +911,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <constraint firstItem="MyN-ha-jDt" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="n9t-sP-fDN"/>
                                             <constraint firstAttribute="trailing" secondItem="bPM-E7-gTs" secondAttribute="trailing" constant="25" id="oVE-hH-Hv5"/>
                                             <constraint firstAttribute="trailing" secondItem="EfK-yH-L9I" secondAttribute="trailing" constant="36" id="sTu-fh-RK5"/>
+                                            <constraint firstItem="9pW-k6-kx0" firstAttribute="top" secondItem="BcP-HK-UQ8" secondAttribute="bottom" id="sbU-fY-VD1"/>
                                             <constraint firstItem="PmD-N7-LEG" firstAttribute="top" secondItem="9XI-Tr-20L" secondAttribute="bottom" constant="21" id="xW2-3V-Uve"/>
                                             <constraint firstItem="yko-uM-UJd" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="yOJ-UA-Byy"/>
                                         </constraints>
@@ -992,6 +1007,43 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TF0-5t-d2S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2495.1999999999998" y="28.335832083958024"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bqm-Uf-8jK">
+            <objects>
+                <viewController id="soj-b9-0Eq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cCi-oB-uXY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-nE-oW9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rJm-w6-Ex6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJm-w6-Ex6" id="oMc-Je-7Rt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D24-nE-oW9" firstAttribute="leading" secondItem="h6a-op-eMh" secondAttribute="leading" id="4WV-9D-jlF"/>
+                            <constraint firstItem="D24-nE-oW9" firstAttribute="top" secondItem="cCi-oB-uXY" secondAttribute="top" id="e3g-Jc-pXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="D24-nE-oW9" secondAttribute="trailing" id="ePW-ke-eDj"/>
+                            <constraint firstItem="D24-nE-oW9" firstAttribute="bottom" secondItem="h6a-op-eMh" secondAttribute="bottom" id="fYS-JH-IBo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="h6a-op-eMh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UH2-w4-ed2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3548" y="18.440779610194905"/>
         </scene>
     </scenes>
     <resources>

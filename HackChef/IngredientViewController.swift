@@ -31,6 +31,12 @@ class IngredientViewController: UIViewController {
         commentsButtonView.isHidden = false
     }
     
+    @IBAction func onStartCookingButtonTap(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
+            present(vc, animated: true)
+        }
+    }
+    
     @IBAction func onBackButtonTap(_ sender: UIButton) {
         dismiss(animated: true)
     }

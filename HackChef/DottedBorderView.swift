@@ -21,6 +21,16 @@ class DottedBorderView: UIView {
 }
 
 class DottedLineView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor.white
+
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func draw(_ rect: CGRect) {
         let dashShape = CAShapeLayer()
         dashShape.strokeColor = UIColor.hcLightGrey.cgColor

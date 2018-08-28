@@ -11,6 +11,13 @@
 		9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D503212A37F400E96247 /* IngredientDetailViewController.swift */; };
 		9126D506212A430500E96247 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D505212A430500E96247 /* CommentCell.swift */; };
 		9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D507212A435300E96247 /* CommentReplyCell.swift */; };
+		9175C07B212F6ED00094CF66 /* KPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C077212F6ECF0094CF66 /* KPItem.swift */; };
+		9175C07C212F6ED00094CF66 /* KPActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C078212F6ECF0094CF66 /* KPActionSheet.swift */; };
+		9175C07D212F6ED00094CF66 /* KPItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C079212F6ECF0094CF66 /* KPItemView.swift */; };
+		9175C07E212F6ED00094CF66 /* KPItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9175C07A212F6ED00094CF66 /* KPItemView.xib */; };
+		9175C0802132E35E0094CF66 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C07F2132E35E0094CF66 /* CommentsViewController.swift */; };
+		9175C0832132E3BD0094CF66 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C0822132E3BD0094CF66 /* Comment.swift */; };
+		9175C0852134D7F10094CF66 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9175C0842134D7F10094CF66 /* CommentCell.xib */; };
 		919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB07211F7123007B4765 /* AppDelegate.swift */; };
 		919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */; };
 		919CEB0D211F7123007B4765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919CEB0B211F7123007B4765 /* Main.storyboard */; };
@@ -39,6 +46,13 @@
 		9126D503212A37F400E96247 /* IngredientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailViewController.swift; sourceTree = "<group>"; };
 		9126D505212A430500E96247 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		9126D507212A435300E96247 /* CommentReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyCell.swift; sourceTree = "<group>"; };
+		9175C077212F6ECF0094CF66 /* KPItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPItem.swift; sourceTree = "<group>"; };
+		9175C078212F6ECF0094CF66 /* KPActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPActionSheet.swift; sourceTree = "<group>"; };
+		9175C079212F6ECF0094CF66 /* KPItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPItemView.swift; sourceTree = "<group>"; };
+		9175C07A212F6ED00094CF66 /* KPItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPItemView.xib; sourceTree = "<group>"; };
+		9175C07F2132E35E0094CF66 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		9175C0822132E3BD0094CF66 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9175C0842134D7F10094CF66 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		919CEB04211F7123007B4765 /* HackChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919CEB07211F7123007B4765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOverviewVC.swift; sourceTree = "<group>"; };
@@ -86,6 +100,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9175C0812132E3AD0094CF66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9175C0822132E3BD0094CF66 /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		919CEAFB211F7122007B4765 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +130,7 @@
 		919CEB06211F7123007B4765 /* HackChef */ = {
 			isa = PBXGroup;
 			children = (
+				9175C0812132E3AD0094CF66 /* Model */,
 				919CEB0B211F7123007B4765 /* Main.storyboard */,
 				919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */,
 				919CEB07211F7123007B4765 /* AppDelegate.swift */,
@@ -120,6 +143,8 @@
 				919CEB13211F7124007B4765 /* Info.plist */,
 				9126D505212A430500E96247 /* CommentCell.swift */,
 				9126D507212A435300E96247 /* CommentReplyCell.swift */,
+				9175C07F2132E35E0094CF66 /* CommentsViewController.swift */,
+				9175C0842134D7F10094CF66 /* CommentCell.xib */,
 			);
 			path = HackChef;
 			sourceTree = "<group>";
@@ -143,6 +168,10 @@
 		919CEB32211FB5E4007B4765 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				9175C078212F6ECF0094CF66 /* KPActionSheet.swift */,
+				9175C077212F6ECF0094CF66 /* KPItem.swift */,
+				9175C079212F6ECF0094CF66 /* KPItemView.swift */,
+				9175C07A212F6ED00094CF66 /* KPItemView.xib */,
 				919CEB19211F7915007B4765 /* Fonts */,
 				919CEB2E211F87EB007B4765 /* Extensions.swift */,
 				919CEB0E211F7124007B4765 /* Assets.xcassets */,
@@ -221,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9175C07E212F6ED00094CF66 /* KPItemView.xib in Resources */,
 				919CEB27211F7931007B4765 /* WorkSans-Black.ttf in Resources */,
 				919CEB24211F7931007B4765 /* WorkSans-SemiBold.ttf in Resources */,
 				919CEB28211F7931007B4765 /* WorkSans-Bold.ttf in Resources */,
@@ -233,6 +263,7 @@
 				919CEB2B211F7931007B4765 /* WorkSans-Thin.ttf in Resources */,
 				919CEB25211F7931007B4765 /* WorkSans-ExtraBold.ttf in Resources */,
 				919CEB23211F7931007B4765 /* WorkSans-Regular.ttf in Resources */,
+				9175C0852134D7F10094CF66 /* CommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +318,17 @@
 				919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */,
 				91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */,
 				919CEB36211FCA64007B4765 /* Constants.swift in Sources */,
+				9175C0832132E3BD0094CF66 /* Comment.swift in Sources */,
 				919CEB2F211F87EB007B4765 /* Extensions.swift in Sources */,
 				9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */,
 				9126D506212A430500E96247 /* CommentCell.swift in Sources */,
+				9175C07B212F6ED00094CF66 /* KPItem.swift in Sources */,
 				919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */,
 				919CEB31211FB5CF007B4765 /* IngredientViewController.swift in Sources */,
 				919CEB2D211F8738007B4765 /* DottedBorderView.swift in Sources */,
+				9175C0802132E35E0094CF66 /* CommentsViewController.swift in Sources */,
+				9175C07D212F6ED00094CF66 /* KPItemView.swift in Sources */,
+				9175C07C212F6ED00094CF66 /* KPActionSheet.swift in Sources */,
 				9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

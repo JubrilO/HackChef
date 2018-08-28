@@ -35,7 +35,11 @@ class RecipeOverviewVC: UIViewController {
     }
     
     @IBAction func onStartCookingButtonTap(_ sender: UITapGestureRecognizer) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC )
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
+            present(vc, animated: true)
+        }
     }
+    
+    
 }
 
