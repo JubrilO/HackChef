@@ -16,5 +16,23 @@ extension UIColor {
     class var hcHighlightColor: UIColor {
         return UIColor(red: 1, green: 0.94, blue: 0.92, alpha: 1)
     }
+    
 }
-
+extension String {
+    func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.width
+    }
+    
+    func heightOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.height
+    }
+    
+    func sizeOfString(usingFont font: UIFont) -> CGSize {
+        let fontAttributes = [NSAttributedStringKey.font: font]
+        return self.size(withAttributes: fontAttributes)
+    }
+}

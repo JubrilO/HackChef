@@ -9,6 +9,9 @@
 import UIKit
 
 class CommentReplyCell: UITableViewCell {
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var usernameButton: UIButton!
+    @IBOutlet weak var lineImage: UIImageView!
     
     
     override func awakeFromNib() {

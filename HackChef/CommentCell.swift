@@ -22,5 +22,9 @@ class CommentCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func setup(username: String, comment: String) {
+        userButton.text = username
+        commentLabel.text = comment
+    }
 
 }

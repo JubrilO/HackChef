@@ -38,6 +38,8 @@
 		919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */; };
 		919CEB36211FCA64007B4765 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB35211FCA64007B4765 /* Constants.swift */; };
 		919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB37212061AB007B4765 /* TableViewCell.swift */; };
+		91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A33442214532C100ED4F7D /* CookingStepNavController.swift */; };
+		91BC24E72135942B009861FA /* CommentReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91BC24E62135942B009861FA /* CommentReplyCell.xib */; };
 		91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCHighlightedButton.swift; sourceTree = "<group>"; };
 		919CEB35211FCA64007B4765 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		919CEB37212061AB007B4765 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		91A33442214532C100ED4F7D /* CookingStepNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepNavController.swift; sourceTree = "<group>"; };
+		91BC24E62135942B009861FA /* CommentReplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentReplyCell.xib; sourceTree = "<group>"; };
 		91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepViewController.swift; sourceTree = "<group>"; };
 		CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEEF422BD96CFDA8D2E1632D /* Pods-HackChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackChef/Pods-HackChef.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		919CEB06211F7123007B4765 /* HackChef */ = {
 			isa = PBXGroup;
 			children = (
+				91A33442214532C100ED4F7D /* CookingStepNavController.swift */,
 				9175C0812132E3AD0094CF66 /* Model */,
 				919CEB0B211F7123007B4765 /* Main.storyboard */,
 				919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */,
@@ -144,7 +149,7 @@
 				9126D505212A430500E96247 /* CommentCell.swift */,
 				9126D507212A435300E96247 /* CommentReplyCell.swift */,
 				9175C07F2132E35E0094CF66 /* CommentsViewController.swift */,
-				9175C0842134D7F10094CF66 /* CommentCell.xib */,
+				91BC24E821359450009861FA /* CommentCell */,
 			);
 			path = HackChef;
 			sourceTree = "<group>";
@@ -179,6 +184,15 @@
 				919CEB35211FCA64007B4765 /* Constants.swift */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		91BC24E821359450009861FA /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				9175C0842134D7F10094CF66 /* CommentCell.xib */,
+				91BC24E62135942B009861FA /* CommentReplyCell.xib */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 		E9706CBE52A671D94B39044E /* Pods */ = {
@@ -252,6 +266,7 @@
 			files = (
 				9175C07E212F6ED00094CF66 /* KPItemView.xib in Resources */,
 				919CEB27211F7931007B4765 /* WorkSans-Black.ttf in Resources */,
+				91BC24E72135942B009861FA /* CommentReplyCell.xib in Resources */,
 				919CEB24211F7931007B4765 /* WorkSans-SemiBold.ttf in Resources */,
 				919CEB28211F7931007B4765 /* WorkSans-Bold.ttf in Resources */,
 				919CEB29211F7931007B4765 /* WorkSans-Medium.ttf in Resources */,
@@ -329,6 +344,7 @@
 				9175C0802132E35E0094CF66 /* CommentsViewController.swift in Sources */,
 				9175C07D212F6ED00094CF66 /* KPItemView.swift in Sources */,
 				9175C07C212F6ED00094CF66 /* KPActionSheet.swift in Sources */,
+				91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */,
 				9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

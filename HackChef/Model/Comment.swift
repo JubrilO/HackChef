@@ -9,5 +9,6 @@
 import Foundation
 struct Comment {
     var text: String
+    var author: String
     var reply: Bool
 }

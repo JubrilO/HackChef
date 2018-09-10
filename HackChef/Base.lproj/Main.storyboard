@@ -492,6 +492,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                     </view>
                     <connections>
                         <outlet property="chefNameHeaderLabel" destination="EJZ-1c-97y" id="Wdz-ZK-XDk"/>
+                        <outlet property="commentCountLabel" destination="pc4-C2-AAh" id="ESo-mL-Hii"/>
                         <outlet property="commentsButtonView" destination="tai-ma-Vc4" id="uPp-HW-OR4"/>
                         <outlet property="listButton" destination="Z3u-es-7nI" id="0f6-TM-pSA"/>
                         <outlet property="recipeNameLabel" destination="hmg-nZ-THC" id="ASI-AP-zdB"/>
@@ -854,7 +855,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pW-k6-kx0">
-                                                <rect key="frame" x="293" y="441.5" width="82" height="75.5"/>
+                                                <rect key="frame" x="293" y="440.5" width="82" height="77.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="sMB-Lv-8Ta"/>
                                                 </constraints>
@@ -898,7 +899,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <constraint firstAttribute="trailing" secondItem="PmD-N7-LEG" secondAttribute="trailing" id="TLD-lf-OJn"/>
                                             <constraint firstAttribute="trailing" secondItem="4di-20-653" secondAttribute="trailing" constant="25" id="TRt-Ty-aqr"/>
                                             <constraint firstItem="yko-uM-UJd" firstAttribute="top" secondItem="MyN-ha-jDt" secondAttribute="bottom" constant="30" id="UAy-o4-WIQ"/>
-                                            <constraint firstItem="MyN-ha-jDt" firstAttribute="top" secondItem="9pW-k6-kx0" secondAttribute="bottom" id="biz-cD-hJy"/>
+                                            <constraint firstItem="MyN-ha-jDt" firstAttribute="top" secondItem="9pW-k6-kx0" secondAttribute="bottom" constant="-1" id="biz-cD-hJy"/>
                                             <constraint firstItem="BcP-HK-UQ8" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="cQv-Dz-svc"/>
                                             <constraint firstAttribute="trailing" secondItem="9pW-k6-kx0" secondAttribute="trailing" id="cY7-CK-ozT"/>
                                             <constraint firstItem="EfK-yH-L9I" firstAttribute="top" secondItem="PmD-N7-LEG" secondAttribute="bottom" constant="30" id="cn0-E4-DA6"/>
@@ -911,7 +912,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <constraint firstItem="MyN-ha-jDt" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="n9t-sP-fDN"/>
                                             <constraint firstAttribute="trailing" secondItem="bPM-E7-gTs" secondAttribute="trailing" constant="25" id="oVE-hH-Hv5"/>
                                             <constraint firstAttribute="trailing" secondItem="EfK-yH-L9I" secondAttribute="trailing" constant="36" id="sTu-fh-RK5"/>
-                                            <constraint firstItem="9pW-k6-kx0" firstAttribute="top" secondItem="BcP-HK-UQ8" secondAttribute="bottom" id="sbU-fY-VD1"/>
+                                            <constraint firstItem="9pW-k6-kx0" firstAttribute="top" secondItem="BcP-HK-UQ8" secondAttribute="bottom" constant="-1" id="sbU-fY-VD1"/>
                                             <constraint firstItem="PmD-N7-LEG" firstAttribute="top" secondItem="9XI-Tr-20L" secondAttribute="bottom" constant="21" id="xW2-3V-Uve"/>
                                             <constraint firstItem="yko-uM-UJd" firstAttribute="leading" secondItem="u0i-Sp-wd8" secondAttribute="leading" constant="25" id="yOJ-UA-Byy"/>
                                         </constraints>
@@ -1008,15 +1009,15 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
             </objects>
             <point key="canvasLocation" x="2495.1999999999998" y="28.335832083958024"/>
         </scene>
-        <!--View Controller-->
+        <!--Comments View Controller-->
         <scene sceneID="bqm-Uf-8jK">
             <objects>
-                <viewController id="soj-b9-0Eq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentsVC" id="soj-b9-0Eq" customClass="CommentsViewController" customModule="HackChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cCi-oB-uXY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-nE-oW9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D24-nE-oW9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1024,11 +1025,15 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJm-w6-Ex6" id="oMc-Je-7Rt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="soj-b9-0Eq" id="0bb-Df-WYS"/>
+                                    <outlet property="delegate" destination="soj-b9-0Eq" id="ad6-7a-k69"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1040,6 +1045,9 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6a-op-eMh"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="D24-nE-oW9" id="Tgd-3k-rr2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UH2-w4-ed2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
