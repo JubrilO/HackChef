@@ -52,14 +52,13 @@ class IngredientViewController: UIViewController {
     
     @IBAction func onStartCookingButtonTap(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
-            let navVC = CookingStepNavController(rootViewController: vc)
-            present(navVC, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
 
     }
     
     @IBAction func onBackButtonTap(_ sender: UIButton) {
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
 

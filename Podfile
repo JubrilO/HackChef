@@ -7,6 +7,7 @@ target 'HackChef' do
 
   # Pods for HackChef
 pod 'GrowingTextView', '~> 0.5'
+pod 'Firebase/Core'
 
  
 

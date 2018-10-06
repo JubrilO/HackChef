@@ -31,9 +31,6 @@ class CookingStepViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          timerLabel.text = timeString(time: TimeInterval(seconds))
-        navigationController?.interactivePopGestureRecognizer?.delegate = nil;
-
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func onPlayButtonTap(_ sender: UIButton) {
@@ -95,7 +92,7 @@ class CookingStepViewController: UIViewController {
                 print("Hello girls 😇")
             }),
             KPItem(title: "End cooking session", onTap: {
-                self.dismiss(animated: true)
+                self.navigationController?.popToRootViewController(animated: true)
             })
             ])
         present(kpActionSheet, animated: true, completion: nil)
@@ -106,10 +103,10 @@ class CookingStepViewController: UIViewController {
 
 extension CookingStepViewController: UINavigationControllerDelegate {
     
-    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        <#code#>
-    }
-    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
-        self.interactivePopGestureRecognizer?.enabled = self.viewControllers.count > 1
-    }
+//    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+//        <#code#>
+//    }
+//    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
+//        self.interactivePopGestureRecognizer?.enabled = self.viewControllers.count > 1
+//    }
 }

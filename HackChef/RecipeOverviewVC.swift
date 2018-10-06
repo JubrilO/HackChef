@@ -30,14 +30,13 @@ class RecipeOverviewVC: UIViewController {
 
     @IBAction func onIngredientsButtonTap(_ sender: UITapGestureRecognizer) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.IngredientVC) as? IngredientViewController {
-            present(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func onStartCookingButtonTap(_ sender: UITapGestureRecognizer) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
-            let navVC = CookingStepNavController(rootViewController: vc)
-            present(navVC, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
