@@ -36,3 +36,22 @@ extension String {
         return self.size(withAttributes: fontAttributes)
     }
 }
+
+extension UIViewController {
+    func add(_ child: UIViewController) {
+        addChildViewController(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParentViewController: self)
+    }
+    
+    func remove() {
+        guard parent != nil else {
+            return
+        }
+        
+        willMove(toParentViewController: nil)
+        removeFromParentViewController()
+        view.removeFromSuperview()
+    }
+}

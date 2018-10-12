@@ -19,6 +19,7 @@ struct Constants {
         static let CookingStepVC = "CookingStepVC"
         static let IngredientDetailVC = "IngredientDetailVC"
         static let RecipeOverviewVC = "RecipeOverviewVC"
+        static let CountDownVC = "CountDownVC"
     }
     
 }
@@ -28,4 +29,14 @@ func delay(_ delay: Double, closure: @escaping () -> ()) {
     DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
         closure()
     }
+}
+
+func timeString(time:TimeInterval) -> String {
+    let hours = Int(time) / 3600
+    let minutes = Int(time) / 60 % 60
+    let seconds = Int(time) % 60
+    if hours == 0 {
+        return String(format:"%02i:%02i", minutes, seconds)
+    }
+    return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
 }

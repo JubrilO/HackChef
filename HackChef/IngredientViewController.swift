@@ -23,7 +23,7 @@ class IngredientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         listButton.isHidden = true
-        commentCountLabel.text = "2"
+        commentCountLabel.text = "200"
     }
 
     @IBAction func onCommentsButtonTap(_ sender: UITapGestureRecognizer) {

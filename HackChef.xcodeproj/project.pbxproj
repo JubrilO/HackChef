@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		41FF53B3DAC15D963B1D02B1 /* Pods_HackChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */; };
+		91136B34216BC177006F6A4A /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91136B33216BC177006F6A4A /* CountDownViewController.swift */; };
 		9118157D2150F1F5003C5BD8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9118157C2150F1F5003C5BD8 /* Recipe.swift */; };
+		912153A0216EB41B007595D4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121539F216EB41B007595D4 /* Animation.swift */; };
+		912153A2216F6DFF007595D4 /* FadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912153A1216F6DFF007595D4 /* FadeInTransition.swift */; };
 		9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D503212A37F400E96247 /* IngredientDetailViewController.swift */; };
 		9126D506212A430500E96247 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D505212A430500E96247 /* CommentCell.swift */; };
 		9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D507212A435300E96247 /* CommentReplyCell.swift */; };
@@ -41,13 +44,17 @@
 		919CEB36211FCA64007B4765 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB35211FCA64007B4765 /* Constants.swift */; };
 		919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB37212061AB007B4765 /* TableViewCell.swift */; };
 		91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A33442214532C100ED4F7D /* CookingStepNavController.swift */; };
+		91B3D857216CB22B008CAD16 /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B3D856216CB22B008CAD16 /* FirestoreModel.swift */; };
 		91BC24E72135942B009861FA /* CommentReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91BC24E62135942B009861FA /* CommentReplyCell.xib */; };
 		91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F06C46D5BC43E71636FCE91 /* Pods-HackChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackChef/Pods-HackChef.debug.xcconfig"; sourceTree = "<group>"; };
+		91136B33216BC177006F6A4A /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		9118157C2150F1F5003C5BD8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		9121539F216EB41B007595D4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		912153A1216F6DFF007595D4 /* FadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInTransition.swift; sourceTree = "<group>"; };
 		9126D503212A37F400E96247 /* IngredientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailViewController.swift; sourceTree = "<group>"; };
 		9126D505212A430500E96247 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		9126D507212A435300E96247 /* CommentReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyCell.swift; sourceTree = "<group>"; };
@@ -82,6 +89,7 @@
 		919CEB35211FCA64007B4765 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		919CEB37212061AB007B4765 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		91A33442214532C100ED4F7D /* CookingStepNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepNavController.swift; sourceTree = "<group>"; };
+		91B3D856216CB22B008CAD16 /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		91BC24E62135942B009861FA /* CommentReplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentReplyCell.xib; sourceTree = "<group>"; };
 		91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepViewController.swift; sourceTree = "<group>"; };
 		CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +121,7 @@
 			children = (
 				9175C0822132E3BD0094CF66 /* Comment.swift */,
 				9118157C2150F1F5003C5BD8 /* Recipe.swift */,
+				91B3D856216CB22B008CAD16 /* FirestoreModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 				9126D507212A435300E96247 /* CommentReplyCell.swift */,
 				9175C07F2132E35E0094CF66 /* CommentsViewController.swift */,
 				91BC24E821359450009861FA /* CommentCell */,
+				91136B33216BC177006F6A4A /* CountDownViewController.swift */,
 			);
 			path = HackChef;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				919CEB0E211F7124007B4765 /* Assets.xcassets */,
 				919CEB10211F7124007B4765 /* LaunchScreen.storyboard */,
 				919CEB35211FCA64007B4765 /* Constants.swift */,
+				9121539F216EB41B007595D4 /* Animation.swift */,
+				912153A1216F6DFF007595D4 /* FadeInTransition.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -299,14 +311,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackChef/Pods-HackChef-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,11 +367,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912153A0216EB41B007595D4 /* Animation.swift in Sources */,
 				919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */,
 				919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */,
 				919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */,
 				91BC4448212B5BA5005EFEBF /* CookingStepViewController.swift in Sources */,
 				919CEB36211FCA64007B4765 /* Constants.swift in Sources */,
+				91B3D857216CB22B008CAD16 /* FirestoreModel.swift in Sources */,
 				9175C0832132E3BD0094CF66 /* Comment.swift in Sources */,
 				919CEB2F211F87EB007B4765 /* Extensions.swift in Sources */,
 				9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */,
@@ -351,12 +381,14 @@
 				9175C07B212F6ED00094CF66 /* KPItem.swift in Sources */,
 				919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */,
 				919CEB31211FB5CF007B4765 /* IngredientViewController.swift in Sources */,
+				91136B34216BC177006F6A4A /* CountDownViewController.swift in Sources */,
 				919CEB2D211F8738007B4765 /* DottedBorderView.swift in Sources */,
 				9175C0802132E35E0094CF66 /* CommentsViewController.swift in Sources */,
 				9175C07D212F6ED00094CF66 /* KPItemView.swift in Sources */,
 				9175C07C212F6ED00094CF66 /* KPActionSheet.swift in Sources */,
 				9118157D2150F1F5003C5BD8 /* Recipe.swift in Sources */,
 				91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */,
+				912153A2216F6DFF007595D4 /* FadeInTransition.swift in Sources */,
 				9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,7 +538,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L785KJVG3Z;
 				INFOPLIST_FILE = HackChef/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jubril.hackchef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -524,7 +559,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L785KJVG3Z;
 				INFOPLIST_FILE = HackChef/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jubril.hackchef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
