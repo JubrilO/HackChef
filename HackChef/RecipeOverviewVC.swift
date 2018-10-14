@@ -73,6 +73,19 @@ class RecipeOverviewVC: UIViewController, UINavigationControllerDelegate {
         }
     }
     
+    func getSteps() {
+        let db = Firestore.firestore()
+        db.collection("recipes").document("cXH71H2cb2dicN4eX5rk").collection("steps").getModels(CookingStep.self) {
+            steps, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                if let s
+            }
+        }
+    }
+    
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if toVC.isMember(of: CountDownViewController.self) {
             return FadeInAnimator(isPresenting: true)

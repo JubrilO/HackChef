@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -18,8 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.isStatusBarHidden = true
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) {
+            granted, error in
+            print(granted)
+        }
+        UNUserNotificationCenter.current().delegate = self
         FirebaseApp.configure()
         return true
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

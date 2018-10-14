@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class CookingStepViewController: UIViewController {
 
@@ -24,7 +25,7 @@ class CookingStepViewController: UIViewController {
     
     var isTimerRunning = false
     var timer = Timer()
-    var seconds = 240
+    var seconds : TimeInterval = 3
     
     
     
@@ -39,12 +40,14 @@ class CookingStepViewController: UIViewController {
             sender.setImage(#imageLiteral(resourceName: "play"), for: .normal)
             sender.backgroundColor = UIColor.white
             timer.invalidate()
+            removePendingNotifications()
         }
         else {
             isTimerRunning = true
             sender.setImage(#imageLiteral(resourceName: "control-pause"), for: .normal)
             sender.backgroundColor = UIColor.hcHighlightColor
             runTimer()
+            triggerNotification()
         }
     }
     
@@ -59,7 +62,7 @@ class CookingStepViewController: UIViewController {
             //Send alert to indicate time's up.
         } else {
             seconds -= 1
-            timerLabel.text = timeString(time: TimeInterval(seconds))
+            timerLabel.text = timeString(time: seconds)
             //timerLabel.text = String(seconds)
             //            labelButton.setTitle(timeString(time: TimeInterval(seconds)), for: UIControlState.normal)
         }
@@ -68,9 +71,27 @@ class CookingStepViewController: UIViewController {
     
     @IBAction func onNextButtonTap(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
+            removePendingNotifications()
             navigationController?.pushViewController(vc, animated: true)
         }
 
+    }
+    
+    func triggerNotification() {
+        let notificationContent = UNMutableNotificationContent()
+        notificationContent.title = "Time Up"
+        notificationContent.body = "Move on to the next step"
+        notificationContent.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
+        let request = UNNotificationRequest(identifier: "Timer", content: notificationContent, trigger: trigger)
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request, withCompletionHandler: nil)
+    }
+    
+    func removePendingNotifications() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: ["Timer"])
     }
     
     @IBAction func onMoreButtonTap(_ sender: UIButton) {
