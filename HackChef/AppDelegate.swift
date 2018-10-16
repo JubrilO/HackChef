@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         UNUserNotificationCenter.current().delegate = self
         FirebaseApp.configure()
+        Firestore.firestore().settings.isPersistenceEnabled = true
         return true
     }
     

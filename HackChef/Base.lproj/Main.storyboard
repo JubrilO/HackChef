@@ -965,11 +965,11 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                             <action selector="onNextButtonTap:" destination="vy1-AA-P5X" eventType="touchUpInside" id="g8a-9S-GsL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-Zd-r2g">
-                                        <rect key="frame" x="25" y="5" width="40" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-Zd-r2g">
+                                        <rect key="frame" x="0.0" y="5" width="75" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="QRy-l3-bei"/>
-                                            <constraint firstAttribute="width" constant="40" id="j9y-9w-Chm"/>
+                                            <constraint firstAttribute="width" constant="75" id="j9y-9w-Chm"/>
                                         </constraints>
                                         <state key="normal" image="more"/>
                                         <connections>
@@ -982,7 +982,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                     <constraint firstItem="UJP-Zd-r2g" firstAttribute="centerY" secondItem="vVu-Ad-6Wq" secondAttribute="centerY" id="F4D-ee-5LZ"/>
                                     <constraint firstAttribute="trailing" secondItem="fyK-B6-ygH" secondAttribute="trailing" constant="25" id="HEB-jC-0GN"/>
                                     <constraint firstItem="fyK-B6-ygH" firstAttribute="centerY" secondItem="vVu-Ad-6Wq" secondAttribute="centerY" id="LU6-29-HZY"/>
-                                    <constraint firstItem="UJP-Zd-r2g" firstAttribute="leading" secondItem="vVu-Ad-6Wq" secondAttribute="leading" constant="25" id="NsU-HE-AWx"/>
+                                    <constraint firstItem="UJP-Zd-r2g" firstAttribute="leading" secondItem="vVu-Ad-6Wq" secondAttribute="leading" id="NsU-HE-AWx"/>
                                     <constraint firstAttribute="height" constant="50" id="VUp-nJ-etg"/>
                                     <constraint firstItem="fyK-B6-ygH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vVu-Ad-6Wq" secondAttribute="leading" constant="20" symbolic="YES" id="vSn-9o-CJX"/>
                                 </constraints>
@@ -1023,6 +1023,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                         <outlet property="descriptionLabel" destination="EfK-yH-L9I" id="aSs-Uv-FFB"/>
                         <outlet property="heatLevelLabel" destination="4kx-KQ-LNc" id="iN3-fk-gyr"/>
                         <outlet property="imageView" destination="PmD-N7-LEG" id="AMI-u5-WvZ"/>
+                        <outlet property="nextStepButton" destination="fyK-B6-ygH" id="ReC-zo-lad"/>
                         <outlet property="playButtonLabel" destination="9pW-k6-kx0" id="caN-38-roQ"/>
                         <outlet property="recipeNameLabel" destination="9XI-Tr-20L" id="au0-5W-bA3"/>
                         <outlet property="tastingNoteHeader" destination="yko-uM-UJd" id="61x-Zv-P2g"/>
@@ -1076,7 +1077,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UH2-w4-ed2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4487.1999999999998" y="18.440779610194905"/>
+            <point key="canvasLocation" x="4193" y="28"/>
         </scene>
         <!--Count Down View Controller-->
         <scene sceneID="Kas-SU-W84">
@@ -1115,7 +1116,22 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XR4-Yp-cO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5781.6000000000004" y="19.340329835082461"/>
+            <point key="canvasLocation" x="5097" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="05e-uA-Yvq">
+            <objects>
+                <viewController id="g6c-Og-HLg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VM7-uZ-VRh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VVO-zZ-Gh9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3P-9o-zg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5908" y="23"/>
         </scene>
         <!--Cooking Step Nav Controller-->
         <scene sceneID="RQJ-Wh-QcT">

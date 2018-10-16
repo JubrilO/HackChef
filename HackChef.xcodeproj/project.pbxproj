@@ -13,6 +13,7 @@
 		912153A0216EB41B007595D4 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9121539F216EB41B007595D4 /* Animation.swift */; };
 		912153A2216F6DFF007595D4 /* FadeInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912153A1216F6DFF007595D4 /* FadeInTransition.swift */; };
 		912153A42171F023007595D4 /* CookingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912153A32171F023007595D4 /* CookingStep.swift */; };
+		912153A62173604B007595D4 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912153A52173604B007595D4 /* Ingredient.swift */; };
 		9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D503212A37F400E96247 /* IngredientDetailViewController.swift */; };
 		9126D506212A430500E96247 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D505212A430500E96247 /* CommentCell.swift */; };
 		9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D507212A435300E96247 /* CommentReplyCell.swift */; };
@@ -57,6 +58,7 @@
 		9121539F216EB41B007595D4 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		912153A1216F6DFF007595D4 /* FadeInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInTransition.swift; sourceTree = "<group>"; };
 		912153A32171F023007595D4 /* CookingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStep.swift; sourceTree = "<group>"; };
+		912153A52173604B007595D4 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		9126D503212A37F400E96247 /* IngredientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailViewController.swift; sourceTree = "<group>"; };
 		9126D505212A430500E96247 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		9126D507212A435300E96247 /* CommentReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				9118157C2150F1F5003C5BD8 /* Recipe.swift */,
 				91B3D856216CB22B008CAD16 /* FirestoreModel.swift */,
 				912153A32171F023007595D4 /* CookingStep.swift */,
+				912153A52173604B007595D4 /* Ingredient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,11 +154,11 @@
 		919CEB06211F7123007B4765 /* HackChef */ = {
 			isa = PBXGroup;
 			children = (
-				912C5C14215195B80024859C /* GoogleService-Info.plist */,
-				91A33442214532C100ED4F7D /* CookingStepNavController.swift */,
 				9175C0812132E3AD0094CF66 /* Model */,
+				912C5C14215195B80024859C /* GoogleService-Info.plist */,
 				919CEB0B211F7123007B4765 /* Main.storyboard */,
 				919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */,
+				91A33442214532C100ED4F7D /* CookingStepNavController.swift */,
 				919CEB07211F7123007B4765 /* AppDelegate.swift */,
 				919CEB2C211F8738007B4765 /* DottedBorderView.swift */,
 				919CEB30211FB5CF007B4765 /* IngredientViewController.swift */,
@@ -167,8 +170,8 @@
 				9126D505212A430500E96247 /* CommentCell.swift */,
 				9126D507212A435300E96247 /* CommentReplyCell.swift */,
 				9175C07F2132E35E0094CF66 /* CommentsViewController.swift */,
-				91BC24E821359450009861FA /* CommentCell */,
 				91136B33216BC177006F6A4A /* CountDownViewController.swift */,
+				91BC24E821359450009861FA /* CommentCell */,
 			);
 			path = HackChef;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */,
 				912153A42171F023007595D4 /* CookingStep.swift in Sources */,
 				9126D506212A430500E96247 /* CommentCell.swift in Sources */,
+				912153A62173604B007595D4 /* Ingredient.swift in Sources */,
 				9175C07B212F6ED00094CF66 /* KPItem.swift in Sources */,
 				919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */,
 				919CEB31211FB5CF007B4765 /* IngredientViewController.swift in Sources */,

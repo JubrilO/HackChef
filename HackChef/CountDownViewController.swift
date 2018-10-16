@@ -38,10 +38,10 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
     
     func setupInitialState() {
         //view.alpha = 0
-        countdownLabel.alpha = 0
+        //countdownLabel.alpha = 0
         logoImageView.alpha = 0
         logoImageView.transform = translateTransform
-        countdownLabel.transform = translateTransform
+        //countdownLabel.transform = translateTransform
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,21 +49,20 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
         animate([
             view.animate([.fadeIn()]),
             logoImageView.animate(inParallel: [.fadeIn(), .transformToOriginal()]),
-            countdownLabel.animate(inParallel: [.fadeIn(), .transformToOriginal()])
+            countdownLabel.animate(inParallel: [.fadeIn()])
             ])
-        delay(1) {
-            self.runTimer()
-        }
+           self.runTimer()
+        
     }
     
     
     
     func runTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
-        if seconds < 1 {
+        if seconds == 1 {
             timer.invalidate()
             //Send alert to indicate time's up.
             presentCookingSteps()

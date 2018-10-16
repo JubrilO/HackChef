@@ -24,6 +24,11 @@ struct Constants {
     
 }
 
+struct StringConstants {
+    static let recipes = "recipes"
+    static let ingredients = "ingredients"
+}
+
 func delay(_ delay: Double, closure: @escaping () -> ()) {
     
     DispatchQueue.main.asyncAfter(deadline: .now() + delay) {

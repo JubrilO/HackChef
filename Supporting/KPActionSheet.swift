@@ -16,7 +16,7 @@ public class KPActionSheet: UIViewController {
         bdView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         return bdView
     }()
-    public let menuHeight: CGFloat = 50
+    public let menuHeight: CGFloat = 75
     public var items: [KPItem]!
     var isPresenting: Bool = false
     

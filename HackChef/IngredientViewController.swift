@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class IngredientViewController: UIViewController {
 
@@ -18,12 +19,16 @@ class IngredientViewController: UIViewController {
     @IBOutlet weak var commentCountLabel: UILabel!
     
     var commentsVC = CommentsViewController()
+    var ingredients = [Ingredient]()
+    var steps = [CookingStep]()
 
+    var recipeID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         listButton.isHidden = true
         commentCountLabel.text = "200"
+        getIngredients()
     }
 
     @IBAction func onCommentsButtonTap(_ sender: UITapGestureRecognizer) {
@@ -51,24 +56,64 @@ class IngredientViewController: UIViewController {
     }
     
     @IBAction func onStartCookingButtonTap(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
-            navigationController?.pushViewController(vc, animated: true)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CountDownVC ) {
+            if !steps.isEmpty {
+                if let navVC =  self.navigationController as? CookingStepNavController {
+                    navVC.steps = steps
+                }
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
-
     }
     
     @IBAction func onBackButtonTap(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func getIngredients() {
+        let db = Firestore.firestore()
+        db.collection(StringConstants.recipes).document(recipeID).collection(StringConstants.ingredients).getModels(Ingredient.self) {
+            ingredients, error in
+
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                if let ingredients = ingredients {
+                    self.ingredients = ingredients
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func getSteps() {
+        let db = Firestore.firestore()
+        db.collection("recipes").document(recipeID).collection("steps").getModels(CookingStep.self) {
+            steps, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                if let steps = steps {
+                    print(steps.count)
+                    self.steps = steps
+                }
+            }
+        }
+    }
 }
 
 extension IngredientViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return ingredients.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let ingredient = ingredients[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.IngredientCell) as! SwipeableTableCell
+        cell.ingredient.text = ingredient.name
+        cell.quantity.text = ingredient.quantity
         return cell
     }
 }

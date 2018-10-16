@@ -13,11 +13,34 @@ struct CookingStep {
     var documentID: String!
     var durationSeconds: TimeInterval
     var instruction: String
-    var tasteNote: String
+    var tasteNote: String?
+    var chefName: String
+    var dishName: String
+    var heat: String
+    var heatLevel: HeatLevel {
+        get {
+            if heat == "low" {
+                return .low
+            }
+            else if heat == "medium" {
+                return .medium
+            }
+            else {
+                return .high
+            }
+        }
+    }
+    
+    enum HeatLevel: String {
+        case low
+        case medium
+        case high
+    }
+    
 }
 
 extension CookingStep: FirestoreModel {
     init?(modelData: FirestoreModelData) {
-        try? self.init(documentID: modelData.documentID, durationSeconds: modelData.value(forKey: "durationSeconds"), instruction: modelData.value(forKey: "durationSeconds"), tasteNote: modelData.value(forKey: "tasteNote"))
+        try? self.init(documentID: modelData.documentID, durationSeconds: modelData.value(forKey: "durationSeconds"), instruction: modelData.value(forKey: "instruction"), tasteNote: modelData.value(forKey: "tasteNote"), chefName: modelData.value(forKey: "chefName"), dishName: modelData.value(forKey: "dishName"), heat: modelData.value(forKey: "heat"))
     }
 }

@@ -16,6 +16,15 @@ extension UIColor {
     class var hcHighlightColor: UIColor {
         return UIColor(red: 1, green: 0.94, blue: 0.92, alpha: 1)
     }
+    class var hcLowHeatColor: UIColor {
+        return UIColor(red: 1, green: 0.71, blue: 0.37, alpha: 1)
+    }
+    class var hcMediumHeatColor: UIColor {
+        return UIColor(red: 1, green: 0.52, blue: 0.52, alpha: 1)
+    }
+    class var hcHighHeatColor: UIColor {
+        return UIColor(red: 1, green: 0.52, blue: 0.52, alpha: 1)
+    }
     
 }
 extension String {

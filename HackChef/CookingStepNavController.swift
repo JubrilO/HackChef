@@ -9,7 +9,13 @@
 import UIKit
 
 class CookingStepNavController: UINavigationController {
-
+    var steps = [CookingStep]() {
+        didSet {
+            steps.reverse()
+        }
+    }
+    var index = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

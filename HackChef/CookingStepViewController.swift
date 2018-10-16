@@ -10,7 +10,8 @@ import UIKit
 import UserNotifications
 
 class CookingStepViewController: UIViewController {
-
+    
+    @IBOutlet weak var nextStepButton: UIButton!
     @IBOutlet weak var currentStepCountLabel: UILabel!
     @IBOutlet weak var cookingStepCountLabel: UILabel!
     @IBOutlet weak var tastingNoteLabel: UILabel!
@@ -26,14 +27,19 @@ class CookingStepViewController: UIViewController {
     var isTimerRunning = false
     var timer = Timer()
     var seconds : TimeInterval = 3
-    
+    var cookingStep: CookingStep?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         timerLabel.text = timeString(time: TimeInterval(seconds))
+        if let navVC = navigationController as? CookingStepNavController {
+            cookingStep = navVC.steps[navVC.index]
+        }
+        timerLabel.text = timeString(time: TimeInterval(seconds))
+        navigationController?.delegate = self
+        updateLabels()
     }
-
+    
     @IBAction func onPlayButtonTap(_ sender: UIButton) {
         if isTimerRunning {
             isTimerRunning = false
@@ -51,6 +57,25 @@ class CookingStepViewController: UIViewController {
         }
     }
     
+    func updateLabels() {
+        guard let cookingStep = cookingStep, let navVC = navigationController as? CookingStepNavController else { return}
+        creatorNameLabel.text = cookingStep.chefName + "'s"
+        recipeNameLabel.text = cookingStep.dishName
+        tastingNoteLabel.text = cookingStep.tasteNote
+        descriptionLabel.text = cookingStep.instruction
+        heatLevelLabel.setupHeatLevelText(heat: cookingStep.heatLevel)
+        seconds = cookingStep.durationSeconds
+        timerLabel.text = timeString(time: cookingStep.durationSeconds)
+        currentStepCountLabel.text = String(navVC.index+1)
+        cookingStepCountLabel.text = " / " + String(navVC.steps.count)
+        if cookingStep.tasteNote == nil {
+            tastingNoteHeader.isHidden = true
+        }
+        if navVC.index+1 == navVC.steps.count {
+            nextStepButton.setTitle("End Cooking Session", for: .normal)
+        }
+    }
+    
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
         isTimerRunning = true
@@ -59,22 +84,35 @@ class CookingStepViewController: UIViewController {
     @objc func updateTimer() {
         if seconds < 1 {
             timer.invalidate()
-            //Send alert to indicate time's up.
         } else {
             seconds -= 1
             timerLabel.text = timeString(time: seconds)
-            //timerLabel.text = String(seconds)
-            //            labelButton.setTitle(timeString(time: TimeInterval(seconds)), for: UIControlState.normal)
         }
     }
     
     
     @IBAction func onNextButtonTap(_ sender: UIButton) {
+        removePendingNotifications()
+        if let navVC = navigationController as? CookingStepNavController{
+            if navVC.steps.count == navVC.index+1 {
+                presentCompletionScreen()
+            }
+            else {
+                presentNextCookingStep()
+                navVC.index += 1
+            }
+        }
+    }
+    
+    func presentNextCookingStep() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
-            removePendingNotifications()
             navigationController?.pushViewController(vc, animated: true)
         }
-
+    }
+    
+    func presentCompletionScreen() {
+        
+        
     }
     
     func triggerNotification() {
@@ -98,27 +136,45 @@ class CookingStepViewController: UIViewController {
         
         let kpActionSheet = KPActionSheet(items: [
             KPItem(title: "Return to previous step", onTap: {
+                if let navVC = self.navigationController as? CookingStepNavController {
+                    navVC.index -= 1
+                }
                 self.navigationController?.popViewController(animated: true)
             }),
-            KPItem(title: "Send feedback on this step", onTap: {
-                print("Hello girls 😇")
-            }),
             KPItem(title: "End cooking session", onTap: {
+                if let navVC = self.navigationController as? CookingStepNavController {
+                    navVC.index = 0
+                }
                 self.navigationController?.popToRootViewController(animated: true)
             })
             ])
+        if let navVC = navigationController as? CookingStepNavController{
+            if navVC.index == 0 {
+                kpActionSheet.items.remove(at: 0)
+            }
+        }
         present(kpActionSheet, animated: true, completion: nil)
-
+        
     }
     
 }
 
 extension CookingStepViewController: UINavigationControllerDelegate {
     
-//    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-//        <#code#>
-//    }
-//    func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
-//        self.interactivePopGestureRecognizer?.enabled = self.viewControllers.count > 1
-//    }
+}
+
+extension UILabel {
+    func setupHeatLevelText(heat: CookingStep.HeatLevel) {
+        text = heat.rawValue.capitalized
+        switch heat {
+        case .low:
+            textColor = UIColor.hcLowHeatColor
+        case .medium:
+            textColor = UIColor.hcMediumHeatColor
+        case .high:
+            textColor = UIColor.hcHighHeatColor
+        default:
+            break
+        }
+    }
 }
