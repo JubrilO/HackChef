@@ -802,7 +802,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Goat Meat Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-Tr-20L">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Goat Meat Noodles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XI-Tr-20L">
                                                 <rect key="frame" x="25" y="71.5" width="325" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -1118,20 +1118,240 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
             </objects>
             <point key="canvasLocation" x="5097" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Rating View Controller-->
         <scene sceneID="05e-uA-Yvq">
             <objects>
-                <viewController id="g6c-Og-HLg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RatingVC" id="g6c-Og-HLg" customClass="RatingViewController" customModule="HackChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VM7-uZ-VRh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Mock logo" translatesAutoresizingMaskIntoConstraints="NO" id="10Z-5K-6aF">
+                                <rect key="frame" x="146.5" y="197" width="82" height="43"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Goat Meat Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08e-zr-bM7">
+                                <rect key="frame" x="64" y="288" width="247" height="24"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job! You’re done cooking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-SW-l7u">
+                                <rect key="frame" x="83" y="267" width="209" height="17"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-0x-dAq" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="389" width="375" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ys6-Xf-3Ts"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How helpful was this recipe?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3F-IC-yZi">
+                                <rect key="frame" x="87" y="439" width="201" height="17"/>
+                                <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoC-DY-BlQ" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="47.5" y="476" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="WTA-8w-azj"/>
+                                    <constraint firstAttribute="height" constant="40" id="btj-ch-C8D"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                        <color key="value" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="filledBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-VS-lQU" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="605" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="UVb-ZF-FvA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhV-tG-mpL">
+                                <rect key="frame" x="0.0" y="606" width="375" height="61"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7P-JY-mbL" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="sML-IS-uW0"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjd-vL-wbN">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Hpu-un-EwB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onNextButtonTap:" destination="g6c-Og-HLg" eventType="touchUpInside" id="2z0-Pi-ecr"/>
+                                            <action selector="onStartCookingButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="Gn4-WQ-2cI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="k7P-JY-mbL" secondAttribute="trailing" id="58L-Hh-OYG"/>
+                                    <constraint firstItem="Zjd-vL-wbN" firstAttribute="top" secondItem="k7P-JY-mbL" secondAttribute="bottom" id="HIh-IO-i2A"/>
+                                    <constraint firstItem="k7P-JY-mbL" firstAttribute="leading" secondItem="yhV-tG-mpL" secondAttribute="leading" id="RZ2-7u-rhJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zjd-vL-wbN" secondAttribute="bottom" id="cFa-pQ-tHh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjd-vL-wbN" secondAttribute="trailing" id="gHr-FA-qQ0"/>
+                                    <constraint firstItem="Zjd-vL-wbN" firstAttribute="leading" secondItem="yhV-tG-mpL" secondAttribute="leading" id="ieh-Mv-GQU"/>
+                                    <constraint firstItem="k7P-JY-mbL" firstAttribute="top" secondItem="yhV-tG-mpL" secondAttribute="top" id="sfb-r4-gLt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gfy-VS-lQU" firstAttribute="leading" secondItem="VVO-zZ-Gh9" secondAttribute="leading" id="4pv-bI-ZfM"/>
+                            <constraint firstItem="10Z-5K-6aF" firstAttribute="centerX" secondItem="VM7-uZ-VRh" secondAttribute="centerX" id="6g0-GD-RWz"/>
+                            <constraint firstItem="VVO-zZ-Gh9" firstAttribute="trailing" secondItem="gfy-VS-lQU" secondAttribute="trailing" id="CQc-jz-fTv"/>
+                            <constraint firstItem="VDj-SW-l7u" firstAttribute="centerX" secondItem="VM7-uZ-VRh" secondAttribute="centerX" id="HUF-7V-6F9"/>
+                            <constraint firstItem="VDj-SW-l7u" firstAttribute="top" secondItem="10Z-5K-6aF" secondAttribute="bottom" constant="27" id="JIU-Mm-58K"/>
+                            <constraint firstItem="C3F-IC-yZi" firstAttribute="centerX" secondItem="VM7-uZ-VRh" secondAttribute="centerX" id="JXZ-8G-4Ua"/>
+                            <constraint firstItem="yhV-tG-mpL" firstAttribute="leading" secondItem="VVO-zZ-Gh9" secondAttribute="leading" id="LmA-rX-QKy"/>
+                            <constraint firstItem="C3F-IC-yZi" firstAttribute="top" secondItem="l2w-0x-dAq" secondAttribute="bottom" constant="50" id="LvC-lE-4DK"/>
+                            <constraint firstItem="10Z-5K-6aF" firstAttribute="top" secondItem="VVO-zZ-Gh9" secondAttribute="top" constant="177" id="QgZ-xS-51x"/>
+                            <constraint firstItem="VVO-zZ-Gh9" firstAttribute="bottom" secondItem="l2w-0x-dAq" secondAttribute="bottom" constant="278" id="R0P-of-hXC"/>
+                            <constraint firstItem="l2w-0x-dAq" firstAttribute="leading" secondItem="VVO-zZ-Gh9" secondAttribute="leading" id="TpP-Ax-S5T"/>
+                            <constraint firstItem="yhV-tG-mpL" firstAttribute="bottom" secondItem="VVO-zZ-Gh9" secondAttribute="bottom" id="U8p-gD-vvv"/>
+                            <constraint firstItem="VVO-zZ-Gh9" firstAttribute="trailing" secondItem="l2w-0x-dAq" secondAttribute="trailing" id="bUV-R1-A45"/>
+                            <constraint firstItem="yhV-tG-mpL" firstAttribute="top" secondItem="gfy-VS-lQU" secondAttribute="bottom" id="jGl-9z-WDE"/>
+                            <constraint firstItem="yoC-DY-BlQ" firstAttribute="centerX" secondItem="VM7-uZ-VRh" secondAttribute="centerX" id="qBO-ud-Tsj"/>
+                            <constraint firstItem="08e-zr-bM7" firstAttribute="top" secondItem="VDj-SW-l7u" secondAttribute="bottom" constant="4" id="rOc-3j-pE7"/>
+                            <constraint firstItem="08e-zr-bM7" firstAttribute="centerX" secondItem="VM7-uZ-VRh" secondAttribute="centerX" id="uGR-pY-vhs"/>
+                            <constraint firstItem="yhV-tG-mpL" firstAttribute="trailing" secondItem="VVO-zZ-Gh9" secondAttribute="trailing" id="uQl-Lx-uRJ"/>
+                            <constraint firstItem="yoC-DY-BlQ" firstAttribute="top" secondItem="C3F-IC-yZi" secondAttribute="bottom" constant="20" id="ytX-0v-0hb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VVO-zZ-Gh9"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3P-9o-zg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5908" y="23"/>
+            <point key="canvasLocation" x="5908" y="22.938530734632685"/>
+        </scene>
+        <!--Share Image View Controller-->
+        <scene sceneID="ZxK-um-yX3">
+            <objects>
+                <viewController storyboardIdentifier="ShareImageVC" id="43H-3C-PoS" customClass="ShareImageViewController" customModule="HackChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yK-P9-hP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Mock logo" translatesAutoresizingMaskIntoConstraints="NO" id="yKj-Rf-Dz2">
+                                <rect key="frame" x="146.5" y="197" width="82" height="43"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job! You’re done cooking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbE-7x-qBb">
+                                <rect key="frame" x="83" y="267" width="209" height="17"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Goat Meat Noodles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-6c-eB6">
+                                <rect key="frame" x="64" y="288" width="247" height="24"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-tf-f8o" customClass="DottedLineView" customModule="HackChef" customModuleProvider="target">
+                                <rect key="frame" x="8" y="389" width="375" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iDu-Si-IAi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the camera icon to add a picture of your finished meal to the gallery." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfk-su-E6B">
+                                <rect key="frame" x="48" y="440" width="279" height="33"/>
+                                <fontDescription key="fontDescription" name="WorkSans-SemiBold" family="Work Sans" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEm-MF-2UT">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yup-Wm-0kX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="15"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" red="1" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSkipButtonTap:" destination="43H-3C-PoS" eventType="touchUpInside" id="0A6-yX-NhN"/>
+                                    <action selector="onStartCookingButtonTap:" destination="Ggk-XX-q8Y" eventType="touchUpInside" id="eak-8C-Rwa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIn-1Z-eeN">
+                                <rect key="frame" x="157.5" y="498" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="QYP-1s-Idn"/>
+                                    <constraint firstAttribute="width" constant="60" id="v47-Mb-hhu"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Camera"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uEm-MF-2UT" firstAttribute="bottom" secondItem="aOU-BW-F7E" secondAttribute="bottom" id="3NK-KE-bN6"/>
+                            <constraint firstItem="GIn-1Z-eeN" firstAttribute="centerX" secondItem="4yK-P9-hP2" secondAttribute="centerX" id="7zo-k3-NjH"/>
+                            <constraint firstItem="4ki-6c-eB6" firstAttribute="top" secondItem="EbE-7x-qBb" secondAttribute="bottom" constant="4" id="K80-Ut-cLj"/>
+                            <constraint firstAttribute="trailing" secondItem="Jfk-su-E6B" secondAttribute="trailing" constant="48" id="Qho-wJ-Jku"/>
+                            <constraint firstItem="uEm-MF-2UT" firstAttribute="leading" secondItem="aOU-BW-F7E" secondAttribute="leading" id="Wbl-2F-EpS"/>
+                            <constraint firstItem="GIn-1Z-eeN" firstAttribute="top" secondItem="Jfk-su-E6B" secondAttribute="bottom" constant="25" id="ZJp-jR-ty8"/>
+                            <constraint firstItem="Jfk-su-E6B" firstAttribute="leading" secondItem="aOU-BW-F7E" secondAttribute="leading" constant="48" id="dRH-V8-6rj"/>
+                            <constraint firstItem="aOU-BW-F7E" firstAttribute="bottom" secondItem="nKQ-tf-f8o" secondAttribute="bottom" constant="277" id="eJC-Kv-low"/>
+                            <constraint firstItem="yKj-Rf-Dz2" firstAttribute="centerX" secondItem="4yK-P9-hP2" secondAttribute="centerX" id="hBe-0Y-1RC"/>
+                            <constraint firstItem="Jfk-su-E6B" firstAttribute="top" secondItem="nKQ-tf-f8o" secondAttribute="bottom" constant="50" id="iEJ-Bl-OId"/>
+                            <constraint firstItem="uEm-MF-2UT" firstAttribute="trailing" secondItem="aOU-BW-F7E" secondAttribute="trailing" id="mIb-Eg-c3m"/>
+                            <constraint firstItem="4ki-6c-eB6" firstAttribute="centerX" secondItem="4yK-P9-hP2" secondAttribute="centerX" id="pAt-VM-txO"/>
+                            <constraint firstItem="EbE-7x-qBb" firstAttribute="top" secondItem="yKj-Rf-Dz2" secondAttribute="bottom" constant="27" id="pVE-TA-6eF"/>
+                            <constraint firstItem="EbE-7x-qBb" firstAttribute="centerX" secondItem="4yK-P9-hP2" secondAttribute="centerX" id="tDD-sx-TwF"/>
+                            <constraint firstItem="yKj-Rf-Dz2" firstAttribute="top" secondItem="aOU-BW-F7E" secondAttribute="top" constant="177" id="tS8-DJ-xf2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aOU-BW-F7E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0I7-RB-7eD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6687" y="23"/>
         </scene>
         <!--Cooking Step Nav Controller-->
         <scene sceneID="RQJ-Wh-QcT">
@@ -1154,6 +1374,7 @@ So I look around my kitchen and decide to elevate my Indomie with it! And also u
     </scenes>
     <resources>
         <image name="3bc265aeb4053924124f01b5248077c2 (1)" width="750" height="750"/>
+        <image name="Camera" width="47" height="41"/>
         <image name="Line" width="10" height="1"/>
         <image name="Mock logo" width="82.5" height="43.5"/>
         <image name="back" width="11.5" height="18"/>

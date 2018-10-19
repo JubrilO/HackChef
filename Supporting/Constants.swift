@@ -14,12 +14,15 @@ struct Constants {
         static let CommentCell = "CommentCell"
         static let ReplyCell = "ReplyCell"
     }
+    
     struct StoryboardIDs {
         static let IngredientVC = "IngredientVC"
         static let CookingStepVC = "CookingStepVC"
         static let IngredientDetailVC = "IngredientDetailVC"
         static let RecipeOverviewVC = "RecipeOverviewVC"
         static let CountDownVC = "CountDownVC"
+        static let ShareImageVC = "ShareImageVC"
+        static let RatingVC = "RatingVC"
     }
     
 }

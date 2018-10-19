@@ -37,6 +37,7 @@ class CookingStepViewController: UIViewController {
         }
         timerLabel.text = timeString(time: TimeInterval(seconds))
         navigationController?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
         updateLabels()
     }
     
@@ -95,6 +96,7 @@ class CookingStepViewController: UIViewController {
         removePendingNotifications()
         if let navVC = navigationController as? CookingStepNavController{
             if navVC.steps.count == navVC.index+1 {
+                navVC.index = 0
                 presentCompletionScreen()
             }
             else {
@@ -111,8 +113,9 @@ class CookingStepViewController: UIViewController {
     }
     
     func presentCompletionScreen() {
-        
-        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.RatingVC) as? RatingViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func triggerNotification() {
