@@ -98,12 +98,15 @@ PODS:
   - gRPC/Main (1.14.0):
     - gRPC-Core (= 1.14.0)
     - gRPC-RxLibrary (= 1.14.0)
+  - Kingfisher (4.10.0)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Pageboy (2.6.1)
+  - PageControls/SnakePageControl (1.0.1)
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
@@ -111,6 +114,9 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - GrowingTextView (~> 0.5)
+  - Kingfisher (~> 4.0)
+  - Pageboy (~> 2.6)
+  - PageControls/SnakePageControl
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -130,8 +136,11 @@ SPEC REPOS:
     - gRPC-Core
     - gRPC-ProtoRPC
     - gRPC-RxLibrary
+    - Kingfisher
     - leveldb-library
     - nanopb
+    - Pageboy
+    - PageControls
     - Protobuf
 
 SPEC CHECKSUMS:
@@ -151,10 +160,13 @@ SPEC CHECKSUMS:
   gRPC-Core: f4836515817c0eb479aeeb9cc27c91c4ba62a9f6
   gRPC-ProtoRPC: 76f6053639a842e1fb45fa82aa598bf3f4d9f66f
   gRPC-RxLibrary: 3c305f32155024b116b780f389323c73a28197e6
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Pageboy: c2a25d1c280e9b622014b692626f1ff9298e0ad2
+  PageControls: fc2436c93e79419521a6de5d46d84722593e2949
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 80468678254034349e3af15c48c4bc72dc181ac7
+PODFILE CHECKSUM: b233c5c9ac44c223ced0ac000027d045af23ce84
 
 COCOAPODS: 1.5.2

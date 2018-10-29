@@ -20,6 +20,7 @@
 		9126D506212A430500E96247 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D505212A430500E96247 /* CommentCell.swift */; };
 		9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9126D507212A435300E96247 /* CommentReplyCell.swift */; };
 		912C5C15215195B80024859C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912C5C14215195B80024859C /* GoogleService-Info.plist */; };
+		913352A8217E5B34002A00BF /* Alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 913352A7217E5B34002A00BF /* Alarm.wav */; };
 		9175C07B212F6ED00094CF66 /* KPItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C077212F6ECF0094CF66 /* KPItem.swift */; };
 		9175C07C212F6ED00094CF66 /* KPActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C078212F6ECF0094CF66 /* KPActionSheet.swift */; };
 		9175C07D212F6ED00094CF66 /* KPItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C079212F6ECF0094CF66 /* KPItemView.swift */; };
@@ -27,6 +28,7 @@
 		9175C0802132E35E0094CF66 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C07F2132E35E0094CF66 /* CommentsViewController.swift */; };
 		9175C0832132E3BD0094CF66 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175C0822132E3BD0094CF66 /* Comment.swift */; };
 		9175C0852134D7F10094CF66 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9175C0842134D7F10094CF66 /* CommentCell.xib */; };
+		9175D2EE2183B5F600BE3BEC /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9175D2ED2183B5F600BE3BEC /* ImageVC.swift */; };
 		919CEB08211F7123007B4765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB07211F7123007B4765 /* AppDelegate.swift */; };
 		919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */; };
 		919CEB0D211F7123007B4765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919CEB0B211F7123007B4765 /* Main.storyboard */; };
@@ -47,6 +49,9 @@
 		919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */; };
 		919CEB36211FCA64007B4765 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB35211FCA64007B4765 /* Constants.swift */; };
 		919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CEB37212061AB007B4765 /* TableViewCell.swift */; };
+		919CECD821839BCF00FCB086 /* RecipeStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CECD721839BCF00FCB086 /* RecipeStepVC.swift */; };
+		919CECDA21839D0000FCB086 /* PageContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CECD921839D0000FCB086 /* PageContainerVC.swift */; };
+		919CECDC21839FC400FCB086 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CECDB21839FC400FCB086 /* PageVC.swift */; };
 		91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A33442214532C100ED4F7D /* CookingStepNavController.swift */; };
 		91B3D857216CB22B008CAD16 /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B3D856216CB22B008CAD16 /* FirestoreModel.swift */; };
 		91BC24E72135942B009861FA /* CommentReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91BC24E62135942B009861FA /* CommentReplyCell.xib */; };
@@ -67,6 +72,7 @@
 		9126D505212A430500E96247 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		9126D507212A435300E96247 /* CommentReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentReplyCell.swift; sourceTree = "<group>"; };
 		912C5C14215195B80024859C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		913352A7217E5B34002A00BF /* Alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Alarm.wav; sourceTree = "<group>"; };
 		9175C077212F6ECF0094CF66 /* KPItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPItem.swift; sourceTree = "<group>"; };
 		9175C078212F6ECF0094CF66 /* KPActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPActionSheet.swift; sourceTree = "<group>"; };
 		9175C079212F6ECF0094CF66 /* KPItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPItemView.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		9175C07F2132E35E0094CF66 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		9175C0822132E3BD0094CF66 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		9175C0842134D7F10094CF66 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		9175D2ED2183B5F600BE3BEC /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		919CEB04211F7123007B4765 /* HackChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		919CEB07211F7123007B4765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOverviewVC.swift; sourceTree = "<group>"; };
@@ -96,6 +103,9 @@
 		919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCHighlightedButton.swift; sourceTree = "<group>"; };
 		919CEB35211FCA64007B4765 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		919CEB37212061AB007B4765 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		919CECD721839BCF00FCB086 /* RecipeStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepVC.swift; sourceTree = "<group>"; };
+		919CECD921839D0000FCB086 /* PageContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContainerVC.swift; sourceTree = "<group>"; };
+		919CECDB21839FC400FCB086 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		91A33442214532C100ED4F7D /* CookingStepNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingStepNavController.swift; sourceTree = "<group>"; };
 		91B3D856216CB22B008CAD16 /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		91BC24E62135942B009861FA /* CommentReplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentReplyCell.xib; sourceTree = "<group>"; };
@@ -122,6 +132,22 @@
 				CB93D10467DB42AABF6FE08B /* Pods_HackChef.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913352A4217E5B00002A00BF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				913352A6217E5B21002A00BF /* Sounds */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		913352A6217E5B21002A00BF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				913352A7217E5B34002A00BF /* Alarm.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		9175C0812132E3AD0094CF66 /* Model */ = {
@@ -158,17 +184,22 @@
 		919CEB06211F7123007B4765 /* HackChef */ = {
 			isa = PBXGroup;
 			children = (
+				913352A4217E5B00002A00BF /* Library */,
 				9175C0812132E3AD0094CF66 /* Model */,
 				912C5C14215195B80024859C /* GoogleService-Info.plist */,
 				919CEB0B211F7123007B4765 /* Main.storyboard */,
+				919CECD721839BCF00FCB086 /* RecipeStepVC.swift */,
+				919CECDB21839FC400FCB086 /* PageVC.swift */,
+				9175D2ED2183B5F600BE3BEC /* ImageVC.swift */,
+				919CECD921839D0000FCB086 /* PageContainerVC.swift */,
 				919CEB33211FB9C9007B4765 /* HCHighlightedButton.swift */,
-				91A33442214532C100ED4F7D /* CookingStepNavController.swift */,
 				919CEB07211F7123007B4765 /* AppDelegate.swift */,
 				919CEB2C211F8738007B4765 /* DottedBorderView.swift */,
 				919CEB30211FB5CF007B4765 /* IngredientViewController.swift */,
 				9126D503212A37F400E96247 /* IngredientDetailViewController.swift */,
 				919CEB37212061AB007B4765 /* TableViewCell.swift */,
 				919CEB09211F7123007B4765 /* RecipeOverviewVC.swift */,
+				91A33442214532C100ED4F7D /* CookingStepNavController.swift */,
 				91BC4447212B5BA5005EFEBF /* CookingStepViewController.swift */,
 				919CEB13211F7124007B4765 /* Info.plist */,
 				9126D505212A430500E96247 /* CommentCell.swift */,
@@ -300,6 +331,7 @@
 				91BC24E72135942B009861FA /* CommentReplyCell.xib in Resources */,
 				919CEB24211F7931007B4765 /* WorkSans-SemiBold.ttf in Resources */,
 				919CEB28211F7931007B4765 /* WorkSans-Bold.ttf in Resources */,
+				913352A8217E5B34002A00BF /* Alarm.wav in Resources */,
 				919CEB29211F7931007B4765 /* WorkSans-Medium.ttf in Resources */,
 				919CEB12211F7124007B4765 /* LaunchScreen.storyboard in Resources */,
 				919CEB2A211F7931007B4765 /* WorkSans-ExtraLight.ttf in Resources */,
@@ -327,6 +359,9 @@
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/GrowingTextView/GrowingTextView.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PageControls/PageControls.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -342,6 +377,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GrowingTextView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageControls.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -382,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912153A0216EB41B007595D4 /* Animation.swift in Sources */,
+				919CECDC21839FC400FCB086 /* PageVC.swift in Sources */,
 				919CEB34211FB9C9007B4765 /* HCHighlightedButton.swift in Sources */,
 				919CEB38212061AB007B4765 /* TableViewCell.swift in Sources */,
 				919CEB0A211F7123007B4765 /* RecipeOverviewVC.swift in Sources */,
@@ -391,6 +430,8 @@
 				9175C0832132E3BD0094CF66 /* Comment.swift in Sources */,
 				919CEB2F211F87EB007B4765 /* Extensions.swift in Sources */,
 				9126D508212A435300E96247 /* CommentReplyCell.swift in Sources */,
+				919CECDA21839D0000FCB086 /* PageContainerVC.swift in Sources */,
+				9175D2EE2183B5F600BE3BEC /* ImageVC.swift in Sources */,
 				912153A42171F023007595D4 /* CookingStep.swift in Sources */,
 				9126D506212A430500E96247 /* CommentCell.swift in Sources */,
 				912153A62173604B007595D4 /* Ingredient.swift in Sources */,
@@ -407,6 +448,7 @@
 				9118157D2150F1F5003C5BD8 /* Recipe.swift in Sources */,
 				91A33443214532C100ED4F7D /* CookingStepNavController.swift in Sources */,
 				912153A2216F6DFF007595D4 /* FadeInTransition.swift in Sources */,
+				919CECD821839BCF00FCB086 /* RecipeStepVC.swift in Sources */,
 				9126D504212A37F400E96247 /* IngredientDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,13 +596,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L785KJVG3Z;
+				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = HackChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jubril.hackchef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jubrilo.hackchef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -575,13 +617,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L785KJVG3Z;
+				DEVELOPMENT_TEAM = E5H7W73394;
 				INFOPLIST_FILE = HackChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jubril.hackchef;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jubrilo.hackchef;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

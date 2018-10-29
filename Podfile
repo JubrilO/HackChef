@@ -10,6 +10,12 @@ pod 'GrowingTextView', '~> 0.5'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Cosmos', '~> 17.0'
+pod 'Pageboy', '~> 2.6'
+pod 'PageControls/SnakePageControl'
+pod 'Kingfisher', '~> 4.0'
+
+
+
 
  
 

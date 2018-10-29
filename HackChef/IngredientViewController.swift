@@ -28,6 +28,7 @@ class IngredientViewController: UIViewController {
         super.viewDidLoad()
         listButton.isHidden = true
         commentCountLabel.text = "200"
+        commentCountLabel.isHidden = true
         getIngredients()
     }
 

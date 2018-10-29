@@ -11,6 +11,7 @@ import Firebase
 
 struct CookingStep {
     var documentID: String!
+    var images: [String]
     var durationSeconds: TimeInterval
     var instruction: String
     var tasteNote: String?
@@ -41,6 +42,6 @@ struct CookingStep {
 
 extension CookingStep: FirestoreModel {
     init?(modelData: FirestoreModelData) {
-        try? self.init(documentID: modelData.documentID, durationSeconds: modelData.value(forKey: "durationSeconds"), instruction: modelData.value(forKey: "instruction"), tasteNote: modelData.value(forKey: "tasteNote"), chefName: modelData.value(forKey: "chefName"), dishName: modelData.value(forKey: "dishName"), heat: modelData.value(forKey: "heat"))
+        try? self.init(documentID: modelData.documentID, images: modelData.value(forKey: "images"), durationSeconds: modelData.value(forKey: "durationSeconds"), instruction: modelData.value(forKey: "instruction"), tasteNote: modelData.value(forKey: "tasteNote"), chefName: modelData.value(forKey: "chefName"), dishName: modelData.value(forKey: "dishName"), heat: modelData.value(forKey: "heat"))
     }
 }

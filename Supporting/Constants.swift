@@ -23,6 +23,8 @@ struct Constants {
         static let CountDownVC = "CountDownVC"
         static let ShareImageVC = "ShareImageVC"
         static let RatingVC = "RatingVC"
+        static let RecipeStepVC = "RecipeStepVC"
+        static let PageContainerVC = "PageContainerVC"
     }
     
 }

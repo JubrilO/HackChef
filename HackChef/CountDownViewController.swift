@@ -15,6 +15,7 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
     @IBOutlet weak var verticalConstriant: NSLayoutConstraint!
     
     var timer = Timer()
+    var cookingSteps = [CookingStep]()
     var seconds =  3
     let translateTransform = CGAffineTransform(translationX: 0, y: -20)
     
@@ -73,12 +74,13 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     func presentCookingSteps() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CookingStepVC ) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.PageContainerVC ) as? PageContainerVC {
             animate([
                 countdownLabel.animate(inParallel: [.fadeOut(), .transform(to: translateTransform)]),
                 logoImageView.animate(inParallel: [.fadeOut(), .transform(to: translateTransform)])
                 ])
             delay(0.6){
+                vc.cookingSteps = self.cookingSteps
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -89,7 +91,8 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
             return FadeInAnimator(isPresenting: false)
         }
         else {
+
             return nil
-        }
+     }
     }
 }
