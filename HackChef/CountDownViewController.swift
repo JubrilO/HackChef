@@ -39,20 +39,20 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
     
     func setupInitialState() {
         //view.alpha = 0
-        //countdownLabel.alpha = 0
-        logoImageView.alpha = 0
-        logoImageView.transform = translateTransform
-        //countdownLabel.transform = translateTransform
+        countdownLabel.alpha = 0
+        logoImageView.alpha = 1
+        //logoImageView.transform = translateTransform
+        countdownLabel.transform = translateTransform
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animate([
-            view.animate([.fadeIn()]),
-            logoImageView.animate(inParallel: [.fadeIn(), .transformToOriginal()]),
-            countdownLabel.animate(inParallel: [.fadeIn()])
+                        countdownLabel.animate(inParallel: [.fadeIn(),.transformToOriginal()])
             ])
+        delay(0.3){
            self.runTimer()
+        }
         
     }
     
@@ -87,7 +87,7 @@ class CountDownViewController: UIViewController, UINavigationControllerDelegate 
     }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if toVC.isMember(of: CookingStepViewController.self) {
+        if toVC.isMember(of: PageContainerVC.self) {
             return FadeInAnimator(isPresenting: false)
         }
         else {

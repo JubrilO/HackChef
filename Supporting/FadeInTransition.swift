@@ -12,13 +12,15 @@ import UIKit
 class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     var isPresenting: Bool
+    var duration: TimeInterval
     
-    init(isPresenting: Bool) {
+    init(isPresenting: Bool, duration: TimeInterval = 0.4) {
         self.isPresenting = isPresenting
+        self.duration = duration
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.4
+        return duration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -45,7 +47,7 @@ class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             containerView.addSubview(backgroundView)
         }
         
-        let animator = UIViewPropertyAnimator(duration: 0.4, dampingRatio: 1){
+        let animator = UIViewPropertyAnimator(duration: duration, dampingRatio: 1){
             backgroundView.alpha = self.isPresenting ? 1 : 0
         }
         

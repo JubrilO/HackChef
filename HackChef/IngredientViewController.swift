@@ -57,11 +57,9 @@ class IngredientViewController: UIViewController {
     }
     
     @IBAction func onStartCookingButtonTap(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CountDownVC ) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.CountDownVC )  as? CountDownViewController{
             if !steps.isEmpty {
-                if let navVC =  self.navigationController as? CookingStepNavController {
-                    navVC.steps = steps
-                }
+                vc.cookingSteps = steps
                 navigationController?.pushViewController(vc, animated: true)
             }
         }

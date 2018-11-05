@@ -102,7 +102,7 @@ class RecipeOverviewVC: UIViewController, UINavigationControllerDelegate, Cookin
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if toVC.isMember(of: CountDownViewController.self) {
-            return FadeInAnimator(isPresenting: true)
+            return FadeInAnimator(isPresenting: true, duration: 0.4)
         }
         return nil
     }

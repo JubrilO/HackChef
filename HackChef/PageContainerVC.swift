@@ -50,6 +50,22 @@ class PageContainerVC: UIViewController {
         pageVC.scrollToPage(.next, animated: true)
     }
     
+    @IBAction func onEndCookingButtonTap(_ sender: UIButton) {
+        if pageVC.currentIndex!+1 == cookingSteps.count {
+            presentCompletionScreen()
+        }
+        else {
+            navigationController?.popToRootViewController(animated: true)
+        }
+        
+    }
+    
+    func presentCompletionScreen() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: Constants.StoryboardIDs.RatingVC) as? RatingViewController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 
 extension PageContainerVC: PageboyViewControllerDataSource, PageboyViewControllerDelegate {
